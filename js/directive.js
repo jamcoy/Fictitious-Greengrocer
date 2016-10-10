@@ -5,4 +5,10 @@ angular.module('FGG-Directive',[])
             templateUrl: 'templates/directives/navbar.html'
         };
     })
+    .directive('newsletterForm', function() {
+        return {
+            restrict: 'E', // E -> element (or A -> attribute)
+            templateUrl: 'templates/directives/newsletterForm.html'
+        };
+    })
 ;
