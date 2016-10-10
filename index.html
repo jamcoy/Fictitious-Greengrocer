@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="FGG-App" lang="en-GB">
+<html ng-app="FGG-App" lang="en-GB" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>The Fictitious Greengrocer</title>
@@ -10,10 +10,14 @@
 </head>
 <body>
     <div ng-view></div>
-    <!-- Load scripts last -->
+    <!-- Load scripts last (check this makes sense in this circumstance... and what about the others above?-->
     <script src='js/app.js'></script>
     <script src='js/controller.js'></script>
     <!--script src='js/service.js'></script-->
     <script src='js/directive.js'></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/js/carousel.js"></script>
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"></script-->
 </body>
 </html>
