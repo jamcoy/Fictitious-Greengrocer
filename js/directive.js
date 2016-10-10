@@ -23,4 +23,10 @@ angular.module('FGG-Directive',[])
             templateUrl: 'templates/directives/footerBar.html'
         };
     })
+    .directive('produce', function() {
+        return {
+            restrict: 'E', // E -> element (or A -> attribute)
+            templateUrl: 'templates/directives/produce.html'
+        };
+    })
 ;
