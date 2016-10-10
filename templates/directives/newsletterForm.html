@@ -1,12 +1,12 @@
 <form name="newsletterForm" ng-submit="submitForm()" novalidate>
     <div class="form-group">
         <label>Name</label>
-        <input type="text" name="name" class="form-control" ng-model="user.username" required>
+        <input type="text" name="name" class="form-control" ng-model="subscriber.name" required>
         <p ng-show="newsletterForm.name.$pristine" class="help-block">Your username is required</p>
     </div>
     <div class="form-group">
         <label>Email</label>
-        <input type="text" name="email" class="form-control" ng-model="user.email" required>
+        <input type="text" name="email" class="form-control" ng-model="subscriber.email" required>
         <p ng-show="newsletterForm.email.$pristine" class="help-block">Your email address is required</p>
     </div>
     <button type="submit" class="btn btn-primary" ng-disabled="newsletterForm.$invalid">Submit</button>
