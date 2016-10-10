@@ -2,15 +2,8 @@ angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
         $scope.title = "Welcome to the Fictitious Greengrocer";
     })
-    .controller('NewsController', function($scope) {
-        $scope.newsletterUser = {};
-        $scope.submitForm = function() {
-            if ($scope.newsletterForm.$valid) {
-                $scope.newsletterUser.username = $scope.subscriber.name;
-                $scope.newsletterUser.email = $scope.subscriber.email;
-            }
-            console.log($scope.newsletterUser.username, $scope.newsletterUser.email);
-        }
+    .controller('ProduceController', function($scope) {
+        // placeholder
     })
     .controller('BoxesController', function($scope) {
         $scope.boxCustomer = {};
@@ -22,5 +15,18 @@ angular.module('RouteControllers', [])
             }
             console.log($scope.boxCustomer.name, $scope.boxCustomer.email, $scope.boxCustomer.phone);
         }
+    })
+    .controller('NewsController', function($scope) {
+        $scope.newsletterUser = {};
+        $scope.submitForm = function() {
+            if ($scope.newsletterForm.$valid) {
+                $scope.newsletterUser.username = $scope.subscriber.name;
+                $scope.newsletterUser.email = $scope.subscriber.email;
+            }
+            console.log($scope.newsletterUser.username, $scope.newsletterUser.email);
+        }
+    })
+    .controller('ContactController', function($scope) {
+        // placeholder
     })
 ;
