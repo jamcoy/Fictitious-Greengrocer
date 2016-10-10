@@ -11,4 +11,10 @@ angular.module('FGG-Directive',[])
             templateUrl: 'templates/directives/newsletterForm.html'
         };
     })
+    .directive('fruitboxForm', function() {
+        return {
+            restrict: 'E', // E -> element (or A -> attribute)
+            templateUrl: 'templates/directives/fruitboxForm.html'
+        };
+    })
 ;
