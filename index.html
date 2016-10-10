@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="FGG-App" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fictitious Greengrocer</title>
+    <title>The Fictitious Greengrocer</title>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/bootstrap.min.css">
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    <style type="text/css">
+        body {
+            padding-top: 70px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to The Fictitious Greengrocer!</h1>
+    <div ng-view></div>
+    <!-- Load scripts last -->
+    <script src='js/app.js'></script>
+    <script src='js/controller.js'></script>
+    <script src='js/service.js'></script>
 </body>
 </html>

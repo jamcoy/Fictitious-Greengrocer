@@ -6,9 +6,9 @@ angular.module('FGG-App').config(function($routeProvider) {
         templateUrl: 'templates/home.html',
         controller: 'HomeController'
     })
-        .when('/accounts/register', {
-            templateUrl: 'templates/register.html',
-            controller: 'RegisterController'
+        .when('/news', {
+            templateUrl: 'templates/news.html',
+            controller: 'NewsController'
         })
     ;
 
