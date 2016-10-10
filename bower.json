@@ -1,0 +1,23 @@
+{
+  "name": "fictitious-greengrocer",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "jamcoy"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jamcoy/Fictitious-Greengrocer",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
