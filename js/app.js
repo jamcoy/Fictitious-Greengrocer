@@ -1,7 +1,6 @@
 angular.module('FGG-App', ['ngRoute', 'RouteControllers', 'FGG-Directive']);
 
 angular.module('FGG-App').config(function($routeProvider) {
-
     $routeProvider
         .when('/', {
             templateUrl: '../templates/home.html',
@@ -24,5 +23,4 @@ angular.module('FGG-App').config(function($routeProvider) {
             controller: 'ContactController'
         })
     ;
-
 });
