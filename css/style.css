@@ -4,9 +4,30 @@ body {
 }
 
 footer{
+    width: 100%;
     margin-top: 10px;
-    padding-top: 5px;
+    padding-top: 10px;
     background-color: #dddddd;
     text-align: center;
-    height: 30px;
+    height: 52px;
+}
+
+footer table {
+    width: 100%;
+}
+
+footer td {
+    width: 50%;
+}
+
+footer td:first-child {
+    text-align: left;
+}
+
+footer td:last-child {
+    text-align: right;
+}
+
+footer table img {
+    padding-left: 15px;
 }
