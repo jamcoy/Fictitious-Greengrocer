@@ -3,6 +3,16 @@ body {
     padding-top: 70px;
 }
 
+.carousel-caption{
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+}
+
+.carousel-caption h1{
+    padding: 0px;
+    margin: 0px;
+}
+
 footer{
     width: 100%;
     margin-top: 10px;
