@@ -3,6 +3,11 @@ body {
     padding-top: 52px;
 }
 
+.navbar-brand img{
+    float: left;
+    filter: drop-shadow(8px 8px 10px black);
+}
+
 .carousel{
     display: block;
     margin-left: auto;
