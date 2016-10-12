@@ -77,6 +77,11 @@ body {
     text-align: center;
 }
 
+#miniMap{
+    border: 1px solid black;
+}
+
+
 #OSM{
     border: 1px solid black;
     width: 100%;
