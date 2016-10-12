@@ -16,7 +16,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1370px;
+    max-width: 1280px;
 }
 
 .carousel img{
@@ -86,9 +86,13 @@ body {
 
 #miniMap{
     display: inline-block;
-    border: 1px solid black;
+    border: 2px solid black;
     margin-right: 10px;
     vertical-align: top;
+}
+
+#miniMap:hover{
+    border: 2px solid red;
 }
 
 #address{
@@ -124,18 +128,38 @@ body {
     margin-top: 10px;
 }
 
+.newsItem{
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.newsItem:hover{
+    background-color: #dddddd;
+}
+
+.newsItem h4{
+    padding: 0px 12px;
+}
+
+.newsItem p{
+    padding: 2px 12px;
+}
+
 footer{
     box-sizing: border-box;
-    width: 100%;
     margin-top: 10px;
     padding-top: 10px;
-    background-color: #dddddd;
     text-align: center;
     height: 52px;
+    background-color: #dddddd;
 }
 
 footer table {
     width: 100%;
+}
+
+footer .container {
 }
 
 footer td {
