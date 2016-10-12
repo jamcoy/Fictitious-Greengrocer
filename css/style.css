@@ -106,6 +106,24 @@ body {
     height: 350px;
 }
 
+#fruitButtonDiv{
+    margin-top: 20px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+#fruitBox img{
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    display: inline-block;
+}
+
+#fruitBoxButton{
+    margin-top: 10px;
+}
+
 footer{
     box-sizing: border-box;
     width: 100%;
