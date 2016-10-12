@@ -40,8 +40,14 @@ body {
     margin-bottom: 10px;
 }
 
+#homeContact{
+
+}
+
 .homePageInfo .box{
+    /*
     border: 1px solid black;
+    */
 }
 
 .homePageInfo h3{
@@ -73,12 +79,40 @@ body {
     padding-right: 14px;
 }
 
+.homePageInfo td p{
+    margin-bottom: 6px;
+}
+
+.homePageInfo th{
+    margin-bottom: 6px;
+}
+
 .homePageInfo .moreInfoButton {
+    /*
     text-align: center;
+    */
+}
+
+.homePageInfo .box{
+
 }
 
 #miniMap{
+    display: inline-block;
     border: 1px solid black;
+}
+
+#hours{
+    display: inline-block;
+
+}
+
+#groupMapAddress{
+    display: inline-block;
+}
+
+#address{
+    display: inline-block;
 }
 
 

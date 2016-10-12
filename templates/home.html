@@ -50,15 +50,15 @@
     <div class="row homePageInfo">
         <div class="box col-sm-4">
             <h3>Come and visit us!</h3>
-            <h4>Opening hours:</h4>
-            <div class="tableDiv">
-                <table>
+            <div id="homeContact">
+                <table id="hours">
+                    <th>Opening hours:</th>
                     <tr>
                         <td>
                             <p>Monday - Friday</p>
                         </td>
                         <td>
-                            <p>0900 - 1730</p>
+                            <p>9am - 5.30pm</p>
                         </td>
                     </tr>
                     <tr>
@@ -66,41 +66,32 @@
                             <p>Saturday</p>
                         </td>
                         <td>
-                            <p>0900 - 1530</p>
+                            <p>9am - 3.30pm</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p>Sunday and holidays</p>
+                            <p>Sundays and holidays</p>
                         </td>
                         <td>
                             <p>Closed</p>
                         </td>
                     </tr>
                 </table>
+                <div id="groupMapAddress">
+                    <a href="#/contact" id="miniMap" >
+                        <img src="/img/miniMap.png" alt="Small map"/>
+                    </a>
+                    <p id="address">
+                        123 Madeup Street<br/>
+                        Hambrook<br/>
+                        Devshire<br/>
+                        AB01 2AB
+                    </p>
+                </div>
             </div>
-            <h4>Telephone: 01234 567890</h4>
-            <div class="tableDiv">
-                <table>
-                    <tr>
-                        <td>
-                            <a href="#/contact">
-                                <img id="miniMap" src="/img/miniMap.png" alt="Small map"/>
-                            </a>
-                        </td>
-                        <td>
-                            <p id="address">
-                                123 Madeup Street<br/>
-                                Hambrook<br/>
-                                Devshire<br/>
-                                AB01 2AB
-                            </p>
-                            <div class="moreInfoButton">
-                                <a href="#/contact" class="btn btn-primary">Contact</a>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+            <div class="moreInfoButton">
+                <a href="#/contact" class="btn btn-primary">Contact</a>
             </div>
         </div>
         <div class="box col-sm-4">
