@@ -113,7 +113,8 @@ body {
 #OSM{
     border: 1px solid black;
     width: 100%;
-    height: 350px;
+    height: 700px;
+    margin-top: 14px;
 }
 
 #fruitButtonDiv{
@@ -184,6 +185,25 @@ footer table img {
     padding-left: 15px;
 }
 
+.contactPage {
+    padding-top: 10px;
+}
+
+.contactPage h4{
+    margin-bottom: 4px;
+    margin-top: 18px;
+}
+
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    #OSM{
+        height: 600px;
+    }
+}
+
 @media screen and (max-width: 768px){
     .columnInners{
         border-bottom: 2px solid #888888;
@@ -193,4 +213,24 @@ footer table img {
         border-bottom: 0;
         padding-bottom: 0;
     }
+    #OSM{
+        height: 500px;
+    }
 }
+
+/* Extra Small Devices, Phones */
+@media screen and (max-width : 480px) {
+    #OSM{
+        height: 300px;
+    }
+}
+
+
+/* Custom, iPhone Retina */
+@media screen and (max-width : 320px) {
+    #OSM{
+        height: 200px;
+    }
+}
+
+
