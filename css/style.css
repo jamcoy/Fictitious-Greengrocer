@@ -7,9 +7,11 @@ body {
     font-family: "Kaushan Script";
 }
 
+
+
 .navbar-brand img{
-    float: left;
-    filter: drop-shadow(8px 8px 10px black);
+    /*float: left;
+    filter: drop-shadow(8px 8px 10px black);*/
 }
 
 .carousel{
