@@ -49,6 +49,10 @@ body {
 */
 }
 
+.columnInners{
+
+}
+
 .homePageInfo h3{
     font-weight: bold;
 }
@@ -176,4 +180,15 @@ footer td:last-child {
 
 footer table img {
     padding-left: 15px;
+}
+
+@media screen and (max-width: 500px){
+    .columnInners{
+        border-bottom: 2px solid #888888;
+        padding-bottom: 16px;
+    }
+    #bottomColumnInner{
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
 }
