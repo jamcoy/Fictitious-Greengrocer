@@ -36,11 +36,7 @@
         </div>
     </div>
 
-    <!-- Controls
-        Notes on using bootstrap carousel with angularJS (change href attribute to data-target).
-        May also need to replace a tags with span tags
-        http://stackoverflow.com/questions/21907843/bootstrap-carousel-not-working-with-angularjs#24143258
-    -->
+    <!-- Controls (changed href attribute to data-target to work with angular) -->
     <a class="left carousel-control" data-target="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
@@ -51,10 +47,65 @@
     </a>
 </div>
 <div class="container">
-    <div class="row">
-        <div>
-            <p>Home : {{title}}</p>
+    <div class="row homePageInfo">
+        <div class="box col-sm-4">
+            <h3>Come and visit us!</h3>
+            <h4>Opening hours:</h4>
+            <table>
+                <tr>
+                    <td>
+                        <p>Monday - Friday</p>
+                    </td>
+                    <td>
+                        <p>0900 - 1730</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Saturday</p>
+                    </td>
+                    <td>
+                        <p>0900 - 1530</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Sunday and holidays</p>
+                    </td>
+                    <td>
+                        <p>Closed</p>
+                    </td>
+                </tr>
+            </table>
+            <h4>Telephone: 01234 567890</h4>
+            <table>
+                <tr>
+                    <td>
+                        <p id="address">123 Madeup Street</p>
+                        <p id="address">Hambrook</p>
+                        <p id="address">Devshire</p>
+                        <p id="address">AB01 2AB</p>
+                    </td>
+                    <td>
+                        <p>-Map here-</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="box col-sm-4">
+            <h3>Fresh fruit boxes</h3>
+            <p>Flavor the cabbage with hot black pepper, basil leafs, za'atar, and szechuan pepper making sure to cover
+                all of it. Ice raw shrimps in a bowl with water for about an hour to perfect their thickness.
+            </p>
+        </div>
+        <div class="box col-sm-4">
+            <h3>News and events</h3>
+            <p>Halitosis, booty, and malaria. Beauty, grace, and booty. Gar, cold cockroach. you won't sail the reef.
+                Damn yer skiff, feed the bung hole. Damn yer parrot, feed the ale. Why does the cannon wave?
+            </p>
         </div>
     </div>
 </div>
 <footer-bar></footer-bar>
+
+<!--h1>Home : {{title}}</h1-->
