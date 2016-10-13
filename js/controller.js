@@ -11,6 +11,9 @@ angular.module('RouteControllers', [])
         // placeholder
     })
     .controller('BoxesController', function($scope) {
+        $('#orderFruitBox').click(function() {
+            $('#fruitBoxModal').modal('show');
+        });
         $scope.boxCustomer = {};
         $scope.submitForm = function() {
             if ($scope.fruitboxForm.$valid) {
@@ -34,7 +37,6 @@ angular.module('RouteControllers', [])
     .controller('ContactController', function($scope) {
         $('#contactFormButton').click(function() {
             $('#contactModal').modal('show');
-            console.log("Hello...");
         });
     })
     .controller('NoFunctionModalController', function($scope) {
