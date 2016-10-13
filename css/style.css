@@ -180,6 +180,10 @@ footer table img {
     padding-left: 15px;
 }
 
+footer a{
+    color: #444444;
+}
+
 .contactPage {
     padding-top: 10px;
 }
@@ -326,8 +330,8 @@ footer table img {
     text-align: right;
 }
 
-#fiction{
-
+.privacyTermsPage {
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Medium Devices, Desktops */

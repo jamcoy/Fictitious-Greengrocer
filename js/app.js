@@ -22,5 +22,11 @@ angular.module('FGG-App').config(function($routeProvider) {
             templateUrl: '../templates/contact.html',
             controller: 'ContactController'
         })
+        .when('/privacy', {
+            templateUrl: '../templates/privacyTerms.html'
+        })
+        .when('/terms', {
+            templateUrl: '../templates/privacyTerms.html'
+        })
     ;
 });
