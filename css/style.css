@@ -196,18 +196,50 @@ footer table img {
 
 .fruitBoxCardsTitle{
     background-color: #aaeeaa;
+    text-align: center;
+}
+
+.fruitBoxCardsRow{
 }
 
 .fruitBoxCard{
     background-color: #dddddd;
+    max-width: 400px;
+}
+
+.fruitBoxCardImgContainer{
+    padding: 8px;
+    box-sizing: content-box;
+}
+
+.fruitBoxCard img{
+    width: 100%;
+
+}
+
+.fruitBoxCard h2{
+    text-align: center;
+    padding:8px 8px 0 8px;
+    margin: 0;
+}
+
+.fruitBoxCard p{
+    text-align: center;
+    padding: 8px;
 }
 
 .fruitBoxOrder{
     background-color: #aaaaee;
+    text-align: center;
 }
 
 .fruitBoxBenefits{
     background-color: #eeaaaa;
+    text-align: center;
+}
+
+.fruitBoxBenefits p{
+    font-size: large;
 }
 
 
