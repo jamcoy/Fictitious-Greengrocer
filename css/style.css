@@ -267,6 +267,10 @@ footer table img {
     font-size: large;
 }
 
+.newsContainer{
+    font-family: 'Roboto', sans-serif;
+}
+
 .newsStory{
     display: inline-block;
     border: 2px solid black;
@@ -275,9 +279,12 @@ footer table img {
 }
 
 .newsStory img{
-    padding: 15px;
+    margin: 15px;
     width: 35%;
     min-width: 150px;
+}
+
+.newsStoryLeft {
 }
 
 .newsStoryLeft img{
@@ -288,14 +295,24 @@ footer table img {
     float: right;
 }
 
+.newsVideoButton{
+    text-align: center;
+}
+
 .newsStory h3{
     margin-top: 15px;
     margin-bottom: 0;
     padding: 0 15px;
 }
 
-.newsStory p{
-    padding: 15px;
+.newsText{
+    font-size: 1.1em;
+    margin: 15px;
+}
+
+.newsDate{
+    font-size: 0.9em;
+    margin: 5px 15px 15px 15px;
 }
 
 .subscribeContainer{
