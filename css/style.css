@@ -203,6 +203,15 @@ footer table img {
 }
 
 .fruitBoxCardsRow{
+    text-align: center;
+}
+
+.col-centered{
+    display: inline-block;
+    float: none;
+    text-align: left;
+    /* inline-block space fix */
+    margin-right:-4px;
 }
 
 .fruitBoxCard{
@@ -235,11 +244,13 @@ footer table img {
 
 .fruitBoxCard ul{
     display: inline-block;
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    text-align: left;
 }
 
 .fruitBoxCard li{
     list-style-type: none;
+    text-align: left;
 }
 
 .fruitBoxOrder{
