@@ -136,7 +136,7 @@ body {
 }
 
 .newsItem:hover{
-    background-color: #dddddd;
+    background-color: #eeffdd;
 }
 
 .newsItem h4{
@@ -268,64 +268,40 @@ footer table img {
 }
 
 .newsStory{
+    display: inline-block;
+    border: 2px solid black;
+    margin-bottom: 15px;
+    background-color: #eeffdd;
 }
 
-.newsStoryImg img{
-    padding: 15px 0;
-    width: 100%;
+.newsStory img{
+    padding: 15px;
+    width: 35%;
+    min-width: 150px;
+}
+
+.newsStoryLeft img{
+    float: left;
+}
+
+.newsStoryRight img{
+    float: right;
 }
 
 .newsStory h3{
-
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0 15px;
 }
 
 .newsStory p{
-}
-
-.nestedRow{
-    border: 1px solid black;
-    margin-bottom: 15px;
-    background-color: #eeffdd;
-}
-
-.flowTest{
-    display: inline-block;
-    border: 1px solid black;
-    margin-bottom: 15px;
-    background-color: #eeffdd;
-}
-
-.flowTestRight{
-    display: inline-block;
-    border: 1px solid black;
-    margin-bottom: 15px;
-    background-color: #eeffdd;
-}
-
-.flowTest img{
-    float: left;
     padding: 15px;
-    width: 35%;
-    min-width: 150px;
-
-}
-
-.flowTestRight img{
-    float: right;
-    padding: 15px;
-    width: 35%;
-    min-width: 150px;
-
-}
-
-.flowTest p{
-    margin: 15px;
 }
 
 .subscribeContainer{
-    margin-top: 20px;
     padding: 0 12px 12px 12px;
     border: 2px solid black;
+    margin-bottom: 15px;
 }
 
 .subscribeButtonDiv{
