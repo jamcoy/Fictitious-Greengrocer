@@ -207,7 +207,7 @@ footer table img {
 
 .fruitBoxCard{
     background-color: white;
-    max-width: 400px;
+    max-width: 360px;
     border: 2px solid black;
     border-radius: 8px;
     margin-bottom: 12px;
@@ -233,6 +233,7 @@ footer table img {
 }
 
 .fruitBoxOrder{
+    margin-top: 4px;
     text-align: center;
 }
 
