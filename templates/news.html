@@ -1,4 +1,99 @@
 <navbar></navbar>
-<h1>News</h1>
-<newsletter-form></newsletter-form>
+<div class="container newsContainer">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1>News</h1>
+
+            <div class="row nestedRow">
+
+                <div class="col-xs-6 col-sm-6 col-md-4 newsStoryImg">
+                    <img src="/img/fruitboxMaxi.jpeg" alt="Something">
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-8">
+                    <div class="newsStory">
+                        <h3>This is the news title 1 - bootstrap version</h3>
+                        <p>Per guest prepare six oz of BBQ sauce with sliced celery for dessert. Drain asparagus carefully, then
+                            mix with BBQ sauce and serve patiently in frying pan. For a mild dried cake, add some adobo sauce
+                            and anise. Pickles taste best with orange juice and lots of black pepper. Minced watermelon can be
+                            made whole by blending with condensed milk. Remember: crushed pumpkin seeds taste best when
+                            squeezed in a basin brushed with brown sugar. With chicken breasts drink beer. Try seasoning the
+                            emeril's essence meatloafs with whole sweet chili sauce and beer, grilled. When fluffing hardened
+                            lobsters, be sure they are at room temperature.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row nestedRow">
+
+                <div class="col-xs-6 col-sm-6 col-md-8">
+                    <div class="newsStory">
+                        <h3>News title 2 - bootstrap version</h3>
+                        <p>Per guest prepare six oz of BBQ sauce with sliced celery for dessert. Drain asparagus carefully, then
+                            mix with BBQ sauce and serve patiently in frying pan. For a mild dried cake, add some adobo sauce
+                            and anise. Pickles taste best with orange juice and lots of black pepper. Minced watermelon can be
+                            made whole by blending with condensed milk.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-4 newsStoryImg">
+                    <img src="/img/fruitboxMaxi.jpeg" alt="Something">
+                </div>
+
+            </div>
+
+            <div class="flowTest">
+                <img src="/img/fruitboxMaxi.jpeg" alt="Something">
+                <h3>News title 3 - normal version</h3>
+                <p>Per guest prepare six oz of BBQ sauce with sliced celery for dessert. Drain asparagus carefully, then
+                    mix with BBQ sauce and serve patiently in frying pan. For a mild dried cake, add some adobo sauce
+                    and anise. Pickles taste best with orange juice and lots of black pepper. Minced watermelon can be
+                    made whole by blending with condensed milk.
+                </p>
+            </div>
+
+
+            <div class="flowTestRight">
+                <img src="/img/fruitboxMaxi.jpeg" alt="Something">
+                <h3>News title 3 - normal version</h3>
+                <p>Per guest prepare six oz of BBQ sauce with sliced celery for dessert. Drain asparagus carefully, then
+                    mix with BBQ sauce and serve patiently in frying pan. For a mild dried cake, add some adobo sauce
+                    and anise. Pickles taste best with orange juice and lots of black pepper. Minced watermelon can be
+                    made whole by blending with condensed milk.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="col-sm-4">
+            <div class="subscribeContainer">
+                <h3>Subscribe to our newsletter!</h3>
+                <p>Don't miss out on the latest seasonal fresh produce, special deals and exciting events.</p>
+                <p>Typically we send one newsletter per week.</p>
+                <p>You can unsubscribe at any time.  We will never pass your email address to any third party.</p>
+                <form name="newsletterForm" ng-submit="submitForm()" novalidate>
+                    <div class="form-group">
+                        <label class="subscriptionLabel">Name
+                            <span ng-show="newsletterForm.name.$pristine">(required)</span>
+                        </label>
+                        <input type="text" name="name" class="form-control" ng-model="subscriber.name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email
+                            <span ng-show="newsletterForm.email.$pristine">(required)</span>
+                        </label>
+                        <input type="text" name="email" class="form-control" ng-model="subscriber.email" required>
+                    </div>
+                    <div class="subscribeButtonDiv">
+                        <button type="submit" class="btn btn-primary" ng-disabled="newsletterForm.$invalid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--newsletter-form></newsletter-form-->
 <footer-bar></footer-bar>
