@@ -206,11 +206,12 @@ footer table img {
 }
 
 .fruitBoxCard{
-    background-color: white;
+    background-color: #eeffdd;
     max-width: 360px;
     border: 2px solid black;
     border-radius: 8px;
     margin-bottom: 12px;
+    padding-bottom: 12px;
 }
 
 .fruitBoxCardImgContainer{
@@ -228,8 +229,17 @@ footer table img {
 }
 
 .fruitBoxCard p{
+    padding: 5px 8px;
     text-align: center;
-    padding: 8px;
+}
+
+.fruitBoxCard ul{
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.fruitBoxCard li{
+    list-style-type: none;
 }
 
 .fruitBoxOrder{
