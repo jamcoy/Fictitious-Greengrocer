@@ -194,8 +194,11 @@ footer table img {
 
 /* would these be more appropriate as ids rather than classes? */
 
+.fruitBoxCardsContainer{
+    font-family: 'Roboto', sans-serif;
+}
+
 .fruitBoxCardsTitle{
-    background-color: #aaeeaa;
     text-align: center;
 }
 
@@ -203,8 +206,11 @@ footer table img {
 }
 
 .fruitBoxCard{
-    background-color: #dddddd;
+    background-color: white;
     max-width: 400px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-bottom: 12px;
 }
 
 .fruitBoxCardImgContainer{
@@ -217,7 +223,7 @@ footer table img {
 
 }
 
-.fruitBoxCard h2{
+.fruitBoxCard h3{
     text-align: center;
     padding:8px 8px 0 8px;
     margin: 0;
@@ -229,12 +235,11 @@ footer table img {
 }
 
 .fruitBoxOrder{
-    background-color: #aaaaee;
     text-align: center;
 }
 
 .fruitBoxBenefits{
-    background-color: #eeaaaa;
+    /*background-color: #eeaaaa;*/
     text-align: center;
 }
 
