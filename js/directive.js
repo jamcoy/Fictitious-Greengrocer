@@ -32,7 +32,8 @@ angular.module('FGG-Directive',[])
     .directive('noFunction', function() {
         return {
             restrict: 'E', // E -> element (or A -> attribute)
-            templateUrl: 'templates/directives/noFunction.html'
+            templateUrl: 'templates/directives/noFunction.html',
+            controller: 'NoFunctionModalController'
         };
     })
 ;

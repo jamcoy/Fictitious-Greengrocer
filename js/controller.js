@@ -1,7 +1,7 @@
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
         $scope.title = "Welcome to the Fictitious Greengrocer";
-        //$('#fictionModal').modal('show');
+
         // start carousel
         $('#carousel-example-generic').carousel({
             interval: 6000
@@ -33,5 +33,11 @@ angular.module('RouteControllers', [])
     })
     .controller('ContactController', function($scope) {
         // placeholder
+    })
+    .controller('NoFunctionModalController', function($scope) {
+        $('.socialLogo').click(function() {
+            $('#fictionModal').modal('show');
+
+        });
     })
 ;
