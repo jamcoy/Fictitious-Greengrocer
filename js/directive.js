@@ -36,4 +36,11 @@ angular.module('FGG-Directive',[])
             controller: 'NoFunctionModalController'
         };
     })
+    .directive('contactForm', function() {
+        return {
+            restrict: 'E', // E -> element (or A -> attribute)
+            templateUrl: 'templates/directives/contactForm.html',
+            controller: 'ContactController'
+        };
+    })
 ;

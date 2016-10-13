@@ -32,12 +32,14 @@ angular.module('RouteControllers', [])
         }
     })
     .controller('ContactController', function($scope) {
-        // placeholder
+        $('#contactFormButton').click(function() {
+            $('#contactModal').modal('show');
+            console.log("Hello...");
+        });
     })
     .controller('NoFunctionModalController', function($scope) {
         $('.socialLogo').click(function() {
             $('#fictionModal').modal('show');
-
         });
     })
 ;
