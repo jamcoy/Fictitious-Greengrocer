@@ -1,6 +1,7 @@
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
         $scope.title = "Welcome to the Fictitious Greengrocer";
+        //$('#fictionModal').modal('show');
         // start carousel
         $('#carousel-example-generic').carousel({
             interval: 6000

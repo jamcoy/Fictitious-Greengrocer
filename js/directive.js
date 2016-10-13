@@ -29,4 +29,10 @@ angular.module('FGG-Directive',[])
             templateUrl: 'templates/directives/produce.html'
         };
     })
+    .directive('noFunction', function() {
+        return {
+            restrict: 'E', // E -> element (or A -> attribute)
+            templateUrl: 'templates/directives/noFunction.html'
+        };
+    })
 ;
