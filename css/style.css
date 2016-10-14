@@ -334,14 +334,31 @@ footer a{
     font-family: 'Roboto', sans-serif;
 }
 
-.productContainer{
-    background-color: #00b3ee;
-    border: 1px solid black;
-    max-width: 360px;
+.produceContainer{
+    font-family: 'Roboto', sans-serif;
 }
 
 .productRow{
     text-align: center;
+}
+
+.productContainer{
+    max-width: 360px;
+    margin-bottom: 20px;
+}
+
+.productContainer img{
+    width: 100%;
+}
+
+.productContainer img:hover{
+
+}
+
+.productContainer p{
+    padding: 5px 0 0 0;
+    font-size: 1.4em;
+    color: black;
 }
 
 /* Medium Devices, Desktops */
