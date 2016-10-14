@@ -339,6 +339,7 @@ footer a{
 }
 
 .produceCatSelector{
+    max-width: 500px;
     margin: 20px 0;
 }
 
