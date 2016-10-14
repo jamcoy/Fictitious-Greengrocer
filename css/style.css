@@ -338,6 +338,10 @@ footer a{
     font-family: 'Roboto', sans-serif;
 }
 
+.produceCatSelector{
+    margin: 20px 0;
+}
+
 .productRow{
     text-align: center;
 }
