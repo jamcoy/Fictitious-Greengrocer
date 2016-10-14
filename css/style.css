@@ -215,8 +215,8 @@ footer a{
     display: inline-block;
     float: none;
     text-align: left;
-    /* inline-block space fix */
-    margin-right:-4px;
+    /* inline-block space fix
+    margin-right:-4px;*/
 }
 
 .fruitBoxCard{
@@ -332,6 +332,16 @@ footer a{
 
 .privacyTermsPage {
     font-family: 'Roboto', sans-serif;
+}
+
+.productContainer{
+    background-color: #00b3ee;
+    border: 1px solid black;
+    max-width: 360px;
+}
+
+.productRow{
+    text-align: center;
 }
 
 /* Medium Devices, Desktops */
