@@ -8,17 +8,24 @@ angular.module('RouteControllers', [])
         });
     })
     .controller('ProduceController', function($scope) {
+        // not used
         $('#customModal').click(function() {
             $('.faded').css("display", "inline");
             $('.centeredProductDetail').css("display", "inline");
         });
+        // not used
         $('.faded').click(function () {
             $('.faded').css("display", "none");
             $('.centeredProductDetail').css("display", "none");
-        })
+        });
+        // used!
         $('#galleryProduct').click(function() {
             $('.productModal').modal('show');
         });
+        $('#shareButton').click(function() {
+            $('#fictionModal').modal('show');
+        });
+
     })
     .controller('BoxesController', function($scope) {
         $('#orderFruitBox').click(function() {
