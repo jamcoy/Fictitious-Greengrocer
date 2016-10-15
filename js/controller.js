@@ -8,14 +8,17 @@ angular.module('RouteControllers', [])
         });
     })
     .controller('ProduceController', function($scope) {
-        $('#customTest').click(function() {
+        $('#customModal').click(function() {
             $('.faded').css("display", "inline");
-            $('.centered').css("display", "inline");
+            $('.centeredProductDetail').css("display", "inline");
         });
         $('.faded').click(function () {
             $('.faded').css("display", "none");
-            $('.centered').css("display", "none");
+            $('.centeredProductDetail').css("display", "none");
         })
+        $('#galleryProduct').click(function() {
+            $('.productModal').modal('show');
+        });
     })
     .controller('BoxesController', function($scope) {
         $('#orderFruitBox').click(function() {
