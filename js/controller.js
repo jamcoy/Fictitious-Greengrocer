@@ -8,15 +8,11 @@ angular.module('RouteControllers', [])
         });
     })
     .controller('ProduceController', function($scope, ProductJsonService) {
-        // used!
-        //$('#galleryProduct').click(function() {
-        //    $('.productModal').modal('show');
-        //});
-        //$('.productContainer').click(function() {
-         //   var productID = "#" + $(this).attr('id');
-         //   console.log("Clicked", productID);
-            //$(productID).modal('show');
-        //});
+
+        $scope.data = {
+            show: false
+        };
+
         $('#shareButton').click(function() {
             $('#fictionModal').modal('show');
         });
@@ -24,6 +20,7 @@ angular.module('RouteControllers', [])
         $scope.test = function(id) {
             console.log(id);
             $(id).modal('show');
+            //$scope.show = "true"; // angular alternative
         };
 
         $scope.productdetails = {};
