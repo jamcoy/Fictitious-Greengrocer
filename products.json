@@ -1,57 +1,56 @@
-
 [
   {
     "name": "Apples",
     "type": "fruit",
-    "imageFilename": "apples.jpeg",
+    "imagefilename": "apples.jpeg",
     "specialOffer": ""
   },
   {
     "name": "Blueberries",
     "type": "fruit",
-    "imageFilename": "blueberries.jpeg",
+    "imagefilename": "blueberries.jpeg",
     "specialOffer": ""
   },
   {
     "name": "Figs",
     "type": "fruit",
-    "imageFilename": "figs.jpeg",
+    "imagefilename": "figs.jpeg",
     "specialOffer": ""
   },
   {
     "name": "Grapefruit",
     "type": "fruit",
-    "imageFilename": "grapefruit.jpeg",
+    "imagefilename": "grapefruit.jpeg",
     "specialOffer": ""
   },
   {
     "name": "Lemons",
     "type": "fruit",
-    "imageFilename": "lemons.jpeg",
+    "imagefilename": "lemons.jpeg",
     "specialOffer": ""
   },
   {
     "name": "Limes",
     "type": "fruit",
-    "imageFilename": "limes.jpeg",
+    "imagefilename": "limes.jpeg",
     "specialOffer": ""
   },
   {
     "name": "Melons",
     "type": "fruit",
-    "imageFilename": "melons.jpeg",
+    "imagefilename": "melons.jpeg",
     "specialOffer": ""
   },
   {
     "name": "Pomegranates",
     "type": "fruit",
-    "imageFilename": "pomegranates.jpeg",
+    "imagefilename": "pomegranates.jpeg",
     "specialOffer": ""
   },
   {
     "name": "Strawberries",
     "type": "fruit",
-    "imageFilename": "strawberries.jpeg",
+    "imagefilename": "strawberries.jpeg",
     "specialOffer": ""
   }
 ]

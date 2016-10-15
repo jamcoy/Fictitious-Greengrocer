@@ -8,29 +8,29 @@ angular.module('RouteControllers', [])
         });
     })
     .controller('ProduceController', function($scope, ProductJsonService) {
-        // not used
-        $('#customModal').click(function() {
-            $('.faded').css("display", "inline");
-            $('.centeredProductDetail').css("display", "inline");
-        });
-        // not used
-        $('.faded').click(function () {
-            $('.faded').css("display", "none");
-            $('.centeredProductDetail').css("display", "none");
-        });
         // used!
-        $('#galleryProduct').click(function() {
-            $('.productModal').modal('show');
-        });
+        //$('#galleryProduct').click(function() {
+        //    $('.productModal').modal('show');
+        //});
+        //$('.productContainer').click(function() {
+         //   var productID = "#" + $(this).attr('id');
+         //   console.log("Clicked", productID);
+            //$(productID).modal('show');
+        //});
         $('#shareButton').click(function() {
             $('#fictionModal').modal('show');
         });
+        
+        $scope.test = function(id) {
+            console.log(id);
+            $(id).modal('show');
+        };
 
         $scope.productdetails = {};
         var URL = "http://localhost:8080/products.json";
         ProductJsonService.getProducts(URL).then(function(results) {
             $scope.productdetails = results.data;
-            console.log($scope.productdetails);
+            //console.log($scope.productdetails);
         }).catch(function(err) {
             console.dir("Error:", err);
         });

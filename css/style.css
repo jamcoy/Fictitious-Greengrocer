@@ -372,7 +372,6 @@ footer a{
 }
 
 .productDetail p{
-
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -390,38 +389,6 @@ footer a{
 .productDetail .closeButton{
     text-align: right;
 }
-
-.centeredProductDetail { /* NOT USED */
-    background-color: #ffffff;
-    border: 2px solid black;
-    position: fixed;
-    width: 55%;
-    text-align: center;
-    top: 80px;
-    left: 50%;
-    padding: 20px;
-    transform: translate(-50%, 0);
-    z-index: 20;
-    display: none;
-    max-width: 800px;
-}
-
-.centeredProductDetail img{ /* NOT USED */
-    width: 100%;
-}
-
-.faded { /* NOT USED */
-    opacity: 0.5;
-    background-color: #000000;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    display: none;
-}
-
-
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {

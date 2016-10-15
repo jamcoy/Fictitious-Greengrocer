@@ -13,53 +13,46 @@
 
     <div class="row productRow">
 
-        <div class="col-sm-6 col-md-4 col-lg-3 col-centered">
-            <a href="" class="productContainer" id="customModal">
-                <img src="/img/produce/fruit/apples.jpeg" alt="Product">
-                <p>Custom modal</p>
-            </a>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-3 col-centered">
-            <a href="" class="productContainer" id="galleryProduct">
-                <img src="/img/produce/fruit/apples.jpeg" alt="Product">
-                <p>Bootstrap model</p>
+        <div ng-repeat="product in productdetails" class="col-sm-6 col-md-4 col-lg-3 col-centered">
+            <a ng-href="" class="productContainer" ng-click="test('.productModal')">
+                <img ng-src="/img/produce/fruit/{{product.imagefilename}}" alt="{{product.name}}">
+                <p>{{product.name}}</p>
             </a>
         </div>
 
     </div>
 </div>
 
-<div class="faded"></div>
-<div class="centeredProductDetail">
-    <div class="row productDetailRow">
-        <div class="col-lg-12">
-            <img src="/img/produce/fruit/apples.jpeg" alt="Product">
-        </div>
-        <div class="col-lg-12">
-            <p>With cucumbers drink red wine. Bitter, gooey pudding is best tossed with quartered bourbon.</p>
-        </div>
-    </div>
-</div>
 <footer-bar></footer-bar>
 
-<div>
-    <table class="table">
-        <thead>
-        <tr>
-            <td><strong>Title</strong></td>
-            <td><strong>Description</strong></td>
-            <td><strong>Status</strong></td>
-        </tr>
-        </thead>
-        <tr ng-repeat="product in productdetails">
-            <td>{{product.name}}</td>
-            <td>{{product.type}}</td>
-            <td>{{product.imageFilename}}</td>
-        </tr>
-    </table>
+<div ng-repeat="product in productdetails" class="modal fade productModal{{product.name}}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="productDetail">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <img ng-src="/img/produce/fruit/{{product.imagefilename}}" alt="Product" class="productImage">
+                <h4>{{product.name}}</h4>
+                <p>With cucumbers drink red wine. Bitter, gooey pudding is best tossed with quartered bourbon.</p>
+                <p>With cucumbers drink red wine. Bitter, gooey pudding is best tossed with quartered bourbon.</p>
+                <p>With cucumbers drink red wine. Bitter, gooey pudding is best tossed with quartered bourbon.</p>
+                <div class="row productDetailButtonRow">
+                    <div class="col-xs-6">
+                        <p>
+                            <button type="button" class="btn btn-success">Share</button>
+                        </p>
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="closeButton">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
+<!-- non-repeated original -->
 <div class="modal fade productModal">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -73,7 +66,7 @@
                 <div class="row productDetailButtonRow">
                     <div class="col-xs-6">
                         <p>
-                            <button id="shareButton" type="button" class="btn btn-success">Share</button>
+                            <button type="button" class="btn btn-success">Share</button>
                         </p>
                     </div>
                     <div class="col-xs-6">
