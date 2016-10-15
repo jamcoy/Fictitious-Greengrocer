@@ -16,18 +16,11 @@ angular.module('RouteControllers', [])
         $('#shareButton').click(function() {
             $('#fictionModal').modal('show');
         });
-        
-        $scope.test = function(id) {
-            console.log(id);
-            $(id).modal('show');
-            //$scope.show = "true"; // angular alternative
-        };
 
         $scope.productdetails = {};
         var URL = "http://localhost:8080/products.json";
         ProductJsonService.getProducts(URL).then(function(results) {
             $scope.productdetails = results.data;
-            //console.log($scope.productdetails);
         }).catch(function(err) {
             console.dir("Error:", err);
         });
