@@ -362,12 +362,17 @@ footer a{
     color: black;
 }
 
+.productDetail{
+    font-family: 'Roboto', sans-serif;
+}
+
 .productDetail h4{
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .productDetail p{
+
     padding-left: 20px;
     padding-right: 20px;
 }
