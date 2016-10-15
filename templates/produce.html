@@ -43,6 +43,23 @@
 </div>
 <footer-bar></footer-bar>
 
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <td><strong>Title</strong></td>
+            <td><strong>Description</strong></td>
+            <td><strong>Status</strong></td>
+        </tr>
+        </thead>
+        <tr ng-repeat="product in productdetails">
+            <td>{{product.name}}</td>
+            <td>{{product.type}}</td>
+            <td>{{product.imageFilename}}</td>
+        </tr>
+    </table>
+</div>
+
 <div class="modal fade productModal">
     <div class="modal-dialog">
         <div class="modal-content">
