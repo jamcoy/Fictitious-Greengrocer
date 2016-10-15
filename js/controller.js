@@ -8,7 +8,14 @@ angular.module('RouteControllers', [])
         });
     })
     .controller('ProduceController', function($scope) {
-        // placeholder
+        $('#customTest').click(function() {
+            $('.faded').css("display", "inline");
+            $('.centered').css("display", "inline");
+        });
+        $('.faded').click(function () {
+            $('.faded').css("display", "none");
+            $('.centered').css("display", "none");
+        })
     })
     .controller('BoxesController', function($scope) {
         $('#orderFruitBox').click(function() {
