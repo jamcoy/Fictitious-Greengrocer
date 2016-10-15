@@ -7,7 +7,7 @@ angular.module('RouteControllers', [])
             interval: 6000
         });
     })
-    .controller('ProduceController', function($scope) {
+    .controller('ProduceController', function($scope, ProductJsonService) {
         // not used
         $('#customModal').click(function() {
             $('.faded').css("display", "inline");
@@ -24,6 +24,15 @@ angular.module('RouteControllers', [])
         });
         $('#shareButton').click(function() {
             $('#fictionModal').modal('show');
+        });
+
+        $scope.productdetails = {};
+        var URL = "http://localhost:8080/products.json";
+        ProductJsonService.getProducts(URL).then(function(results) {
+            $scope.details = results.data;
+            console.log($scope.details);
+        }).catch(function(err) {
+            console.dir("Error:", err);
         });
 
     })
