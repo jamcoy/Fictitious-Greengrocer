@@ -86,7 +86,6 @@ angular.module('RouteControllers', [])
                 $scope.newsletterUser.username = $scope.subscriber.name;
                 $scope.newsletterUser.email = $scope.subscriber.email;
             }
-            console.log($scope.newsletterUser.username, $scope.newsletterUser.email);
             $('#fictionModal').modal('show');
             var text = "You entered: " + $scope.newsletterUser.username + ", " + $scope.newsletterUser.email;
             $('#customText').text(text);
