@@ -100,8 +100,10 @@ angular.module('RouteControllers', [])
         });
     })
 
-    .controller('NavbarController', function($scope) {
-        //placeholder
+    .controller('NavbarController', function($scope, $location) {
+        $scope.isActive = function(currentLocation) {
+            return currentLocation === $location.path(); // return true or false
+        };
     })
 
 ;
