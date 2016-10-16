@@ -3,7 +3,7 @@ angular.module('RouteControllers', [])
         $scope.title = "Welcome to the Fictitious Greengrocer";
 
         // start carousel
-        $('#carousel-example-generic').carousel({
+        $('#fggCarousel').carousel({
             interval: 6000
         });
     })
