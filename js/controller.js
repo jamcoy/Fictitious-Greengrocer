@@ -98,6 +98,10 @@ angular.module('RouteControllers', [])
         $('.socialLogo').click(function() {
             $('#fictionModal').modal('show');
         });
-
     })
+
+    .controller('NavbarController', function($scope) {
+        //placeholder
+    })
+
 ;
