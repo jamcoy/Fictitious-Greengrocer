@@ -9,6 +9,30 @@ angular.module('RouteControllers', [])
     })
     .controller('ProduceController', function($scope, ProductJsonService) {
 
+        // show fruit initially
+        $scope.showFruit = true;
+
+        $scope.switchProduct = function(type) {
+            $('#fruitButton').removeClass("active");
+            switch(type) {
+                case "fruit":
+                    $scope.showFruit = true;
+                    $scope.showVeg = false;
+                    $scope.showOther = false;
+                    break;
+                case "veg":
+                    $scope.showFruit = false;
+                    $scope.showVeg = true;
+                    $scope.showOther = false;
+                    break;
+                case "other":
+                    $scope.showFruit = false;
+                    $scope.showVeg = false;
+                    $scope.showOther = true;
+                    break;
+            }
+        };
+
         $scope.productdetails = [];
         // Change IP address to wherever deployed.  Can't use localhost - it won't be reachable for non-local clients.
         var URL = "http://192.168.148.167:8080/products.json";

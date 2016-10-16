@@ -63,6 +63,13 @@
     "description": "Combine ground beef, tuna and sausages. garnish with gooey vodka and serve breaked with meatballs. Enjoy!"
   },
   {
+    "name": "Nuts",
+    "type": "other",
+    "imagefilename": "nuts.jpeg",
+    "specialOffer": "",
+    "description": "Instead of garnishing niffy herring juice with marshmellow, use one package tabasco and eight pounds vegemite bottle."
+  },
+  {
     "name": "Potatoes",
     "type": "vegetable",
     "imagefilename": "potatoes.jpeg",

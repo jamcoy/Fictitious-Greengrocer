@@ -4,23 +4,47 @@
     <div class="row productRow">
         <div class="col-sm-12 col-centered">
             <div class="btn-group btn-group-lg produceCatSelector" role="group" aria-label="Product type selection">
-                <button type="button" class="btn btn-default">Fresh fruit</button>
-                <button type="button" class="btn btn-default">Fresh vegetables</button>
-                <button type="button" class="btn btn-default">Other produce</button>
+                <button ng-click="switchProduct('fruit')" type="button" class="btn btn-default active" id="fruitButton">
+                    Fresh fruit
+                </button>
+                <button ng-click="switchProduct('veg')" type="button" class="btn btn-default">
+                    Fresh vegetables
+                </button>
+                <button ng-click="switchProduct('other')" type="button" class="btn btn-default">
+                    Other produce
+                </button>
             </div>
         </div>
     </div>
-
-    <div class="row productRow">
-
-        <div ng-repeat="product in productdetails | filter: { type: 'vegetable' }:true" class="col-sm-6 col-md-4 col-lg-3 col-centered">
+    <div class="row productRow" ng-show="showFruit">
+        <div ng-repeat="product in productdetails | filter: { type: 'fruit' }:true"
+             class="col-sm-6 col-md-4 col-lg-3 col-centered">
             <a ng-href="" class="productContainer"
                ng-click="showProductModal(product.name, product.description, product.imagefilename)">
                 <img ng-src="/img/produce/{{product.imagefilename}}" alt="{{product.name}}">
                 <p>{{product.name}}</p>
             </a>
         </div>
-
+    </div>
+    <div class="row productRow" ng-show="showVeg">
+        <div ng-repeat="product in productdetails | filter: { type: 'vegetable' }:true"
+             class="col-sm-6 col-md-4 col-lg-3 col-centered">
+            <a ng-href="" class="productContainer"
+               ng-click="showProductModal(product.name, product.description, product.imagefilename)">
+                <img ng-src="/img/produce/{{product.imagefilename}}" alt="{{product.name}}">
+                <p>{{product.name}}</p>
+            </a>
+        </div>
+    </div>
+    <div class="row productRow" ng-show="showOther">
+        <div ng-repeat="product in productdetails | filter: { type: 'other' }:true"
+             class="col-sm-6 col-md-4 col-lg-3 col-centered">
+            <a ng-href="" class="productContainer"
+               ng-click="showProductModal(product.name, product.description, product.imagefilename)">
+                <img ng-src="/img/produce/{{product.imagefilename}}" alt="{{product.name}}">
+                <p>{{product.name}}</p>
+            </a>
+        </div>
     </div>
 </div>
 
