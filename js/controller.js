@@ -43,7 +43,7 @@ angular.module('RouteControllers', [])
         ProductJsonService.getProducts(URL).then(function(results) {
             $scope.productdetails = results.data;
         }).catch(function(err) {
-            console.dir("JC error:", err);
+            console.log("ProductJsonService.getProducts(URL) error:", err);
         });
 
         $scope.showProductModal = function(name, description, filename) {

@@ -8,26 +8,31 @@
                 <div class="modal-body">
                     <form name="fruitboxForm" ng-submit="submitForm()" novalidate>
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>Name
+                                <span ng-show="fruitboxForm.name.$pristine">(required)</span>
+                            </label>
                             <input type="text" name="name" class="form-control" ng-model="customer.name" required>
-                            <p ng-show="fruitboxForm.name.$pristine" class="help-block">Your username is required</p>
                         </div>
                         <div class="form-group">
-                            <label>Email</label>
+                            <label>Email
+                                <span ng-show="fruitboxForm.email.$pristine">(required)</span>
+                            </label>
                             <input type="text" name="email" class="form-control" ng-model="customer.email" required>
-                            <p ng-show="fruitboxForm.email.$pristine" class="help-block">Your email address is required</p>
                         </div>
                         <div class="form-group">
-                            <label>Telephone</label>
+                            <label>Telephone
+                                <span ng-show="fruitboxForm.phone.$pristine">(required)</span>
+                            </label>
                             <input type="text" name="phone" class="form-control" ng-model="customer.phone" required>
-                            <p ng-show="fruitboxForm.phone.$pristine" class="help-block">Your phone number is required</p>
+
                         </div>
-                        <button type="submit" class="btn btn-primary" ng-disabled="fruitboxForm.$invalid">Submit</button>
+                        <div class="fruitboxSubmitButton">
+                            <button type="submit" class="btn btn-primary" ng-disabled="fruitboxForm.$invalid">
+                                Submit
+                            </button>
+                        </div>
                     </form>
                 </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-            </div>
         </div>
     </div>
 </div>
