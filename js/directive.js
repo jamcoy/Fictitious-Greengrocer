@@ -43,4 +43,11 @@ angular.module('FGG-Directive',[])
             controller: 'ContactController'
         };
     })
+    .directive('productModal', function() {
+        return {
+            restrict: 'E', // E -> element (or A -> attribute)
+            templateUrl: 'templates/directives/productModal.html',
+            controller: 'ProduceController'
+        };
+    })
 ;

@@ -7,6 +7,7 @@ angular.module('RouteControllers', [])
             interval: 6000
         });
     })
+
     .controller('ProduceController', function($scope, ProductJsonService) {
 
         // show fruit initially
@@ -60,6 +61,7 @@ angular.module('RouteControllers', [])
         });
 
     })
+
     .controller('BoxesController', function($scope) {
         $('#orderFruitBox').click(function() {
             $('#fruitBoxModal').modal('show');
@@ -74,6 +76,7 @@ angular.module('RouteControllers', [])
             console.log($scope.boxCustomer.name, $scope.boxCustomer.email, $scope.boxCustomer.phone);
         }
     })
+
     .controller('NewsController', function($scope) {
         $scope.newsletterUser = {};
         $scope.submitForm = function() {
@@ -84,11 +87,13 @@ angular.module('RouteControllers', [])
             console.log($scope.newsletterUser.username, $scope.newsletterUser.email);
         }
     })
+
     .controller('ContactController', function($scope) {
         $('#contactFormButton').click(function() {
             $('#contactModal').modal('show');
         });
     })
+
     .controller('NoFunctionModalController', function($scope) {
         $('.socialLogo').click(function() {
             $('#fictionModal').modal('show');
