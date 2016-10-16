@@ -1,6 +1,6 @@
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
-        $scope.title = "Welcome to the Fictitious Greengrocer";
+        //$scope.title = "Welcome to the Fictitious Greengrocer";
 
         // start carousel
         $('#fggCarousel').carousel({
@@ -38,7 +38,8 @@ angular.module('RouteControllers', [])
 
         $scope.productdetails = [];
         // Change IP address to wherever deployed.  Can't use localhost - it won't be reachable for non-local clients.
-        var URL = "http://192.168.148.167:8080/products.json";
+        //var URL = "http://192.168.148.167:8080/products.json";
+        var URL = "http://192.168.43.46:8080/products.json";
         ProductJsonService.getProducts(URL).then(function(results) {
             $scope.productdetails = results.data;
         }).catch(function(err) {
@@ -58,6 +59,7 @@ angular.module('RouteControllers', [])
         $('#shareButton').click(function() {
             $('#detail').modal('hide');
             $('#fictionModal').modal('show');
+            $('#customText').text("");
         });
 
     })
@@ -85,18 +87,23 @@ angular.module('RouteControllers', [])
                 $scope.newsletterUser.email = $scope.subscriber.email;
             }
             console.log($scope.newsletterUser.username, $scope.newsletterUser.email);
+            $('#fictionModal').modal('show');
+            var text = "You entered: " + $scope.newsletterUser.username + ", " + $scope.newsletterUser.email;
+            $('#customText').text(text);
         }
     })
 
     .controller('ContactController', function($scope) {
         $('#contactFormButton').click(function() {
             $('#contactModal').modal('show');
+            $('#customText').text("");
         });
     })
 
     .controller('NoFunctionModalController', function($scope) {
         $('.socialLogo').click(function() {
             $('#fictionModal').modal('show');
+            $('#customText').text("");
         });
     })
 
