@@ -9,21 +9,24 @@ angular.module('RouteControllers', [])
     })
     .controller('ProduceController', function($scope, ProductJsonService) {
 
-        $scope.data = {
-            show: false
-        };
-
-        $('#shareButton').click(function() {
-            $('#fictionModal').modal('show');
-        });
-
         $scope.productdetails = {};
-        var URL = "http://localhost:8080/products.json";
+        // Change IP address to wherever deployed.  Can't use localhost - it won't be reachable for non-local clients.
+        var URL = "http://192.168.148.167:8080/products.json";
         ProductJsonService.getProducts(URL).then(function(results) {
             $scope.productdetails = results.data;
         }).catch(function(err) {
             console.dir("Error:", err);
         });
+
+        $scope.showProductModal = function(name, description, filename) {
+            var modal =  $('#detail');
+            modal.find('.detailTitle').text(name);
+            modal.find('.detailDescription').text(description);
+            var source = "/img/produce/fruit/" + filename;
+            modal.find('.productImage').attr("src",source);
+            modal.find('.productImage').attr("alt",name);
+            modal.modal('show');
+        };
 
     })
     .controller('BoxesController', function($scope) {
@@ -59,5 +62,6 @@ angular.module('RouteControllers', [])
         $('.socialLogo').click(function() {
             $('#fictionModal').modal('show');
         });
+
     })
 ;
