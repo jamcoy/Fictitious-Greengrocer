@@ -61,5 +61,12 @@
     "imagefilename": "strawberries.jpeg",
     "specialOffer": "",
     "description": "Combine ground beef, tuna and sausages. garnish with gooey vodka and serve breaked with meatballs. Enjoy!"
+  },
+  {
+    "name": "Potatoes",
+    "type": "vegetable",
+    "imagefilename": "potatoes.jpeg",
+    "specialOffer": "",
+    "description": "Noodles combines greatly with fresh marshmellow."
   }
 ]
