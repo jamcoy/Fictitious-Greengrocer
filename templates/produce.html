@@ -3,16 +3,17 @@
 <div class="container produceContainer">
     <div class="row productRow">
         <div class="col-sm-12 col-centered">
-            <div class="btn-group btn-group-lg produceCatSelector" role="group" aria-label="Product type selection">
-                <button ng-click="switchProduct('fruit')" type="button" class="btn btn-default active" id="fruitButton">
-                    Fresh fruit
-                </button>
-                <button ng-click="switchProduct('veg')" type="button" class="btn btn-default">
-                    Fresh vegetables
-                </button>
-                <button ng-click="switchProduct('other')" type="button" class="btn btn-default">
-                    Other produce
-                </button>
+            <div class="btn-group btn-group-lg produceCatSelector" data-toggle="buttons"
+                 aria-label="Product type selection">
+                <label ng-click="switchProduct('fruit')" class="btn btn-primary active">
+                    <input type="radio" name="options" id="fruitButton" autocomplete="off" checked>Fresh fruit
+                </label>
+                <label ng-click="switchProduct('veg')" class="btn btn-primary">
+                    <input type="radio" name="options" id="vegButton" autocomplete="off">Fresh vegetables
+                </label>
+                <label ng-click="switchProduct('other')" class="btn btn-primary">
+                    <input type="radio" name="options" id="otherButton" autocomplete="off">Other produce
+                </label>
             </div>
         </div>
     </div>

@@ -13,7 +13,9 @@ angular.module('RouteControllers', [])
         $scope.showFruit = true;
 
         $scope.switchProduct = function(type) {
-            $('#fruitButton').removeClass("active");
+            $('#fruitButton').button('toggle');
+            $('#vegButton').button('toggle');
+            $('#otherButton').button('toggle');
             switch(type) {
                 case "fruit":
                     $scope.showFruit = true;
