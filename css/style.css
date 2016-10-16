@@ -204,6 +204,10 @@ footer a{
     margin-top: 12px;
 }
 
+.contactSubmitButton{
+    text-align: right;
+}
+
 /* would these be more appropriate as ids rather than classes? */
 
 .fruitBoxCardsContainer{

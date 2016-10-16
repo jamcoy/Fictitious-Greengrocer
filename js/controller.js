@@ -38,8 +38,8 @@ angular.module('RouteControllers', [])
 
         $scope.productdetails = [];
         // Change IP address to wherever deployed.  Can't use localhost - it won't be reachable for non-local clients.
-        //var URL = "http://192.168.148.167:8080/products.json";
-        var URL = "http://192.168.43.46:8080/products.json";
+        var URL = "http://192.168.148.167:8080/products.json";
+        //var URL = "http://192.168.43.46:8080/products.json";
         ProductJsonService.getProducts(URL).then(function(results) {
             $scope.productdetails = results.data;
         }).catch(function(err) {
@@ -86,10 +86,10 @@ angular.module('RouteControllers', [])
                 $scope.newsletterUser.username = $scope.subscriber.name;
                 $scope.newsletterUser.email = $scope.subscriber.email;
                 $('#fictionModal').modal('show');
-                var text = "You entered: " + $scope.newsletterUser.username + ", " + $scope.newsletterUser.email;
+                var text = "You entered: " + $scope.newsletterUser.username + ", " + $scope.newsletterUser.email
+                    + ".  You haven't really subscribed to anything.";
                 $('#customText').text(text);
             }
-
         }
     })
 
@@ -101,14 +101,13 @@ angular.module('RouteControllers', [])
                 $scope.contactUser.email = $scope.contactor.email;
                 $scope.contactUser.message = $scope.contactor.message;
                 console.log($scope.contactUser.username, $scope.contactUser.email, $scope.contactUser.message);
-                var text = "You entered: " + $scope.contactUser.username + ", " + $scope.contactUser.email + ", " + $scope.contactUser.message;
+                var text = "You entered: " + $scope.contactUser.username + ", " + $scope.contactUser.email + ", "
+                    + $scope.contactUser.message + ".  Your contact message has not been sent to anyone.";
                 $('#contactModal').modal('hide');
                 $('#customText').text(text);
                 $('#fictionModal').modal('show');
             }
-        }
-
-
+        };
 
         $('#contactFormButton').click(function() {
             $('#contactModal').modal('show');
