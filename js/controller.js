@@ -85,14 +85,31 @@ angular.module('RouteControllers', [])
             if ($scope.newsletterForm.$valid) {
                 $scope.newsletterUser.username = $scope.subscriber.name;
                 $scope.newsletterUser.email = $scope.subscriber.email;
+                $('#fictionModal').modal('show');
+                var text = "You entered: " + $scope.newsletterUser.username + ", " + $scope.newsletterUser.email;
+                $('#customText').text(text);
             }
-            $('#fictionModal').modal('show');
-            var text = "You entered: " + $scope.newsletterUser.username + ", " + $scope.newsletterUser.email;
-            $('#customText').text(text);
+
         }
     })
 
     .controller('ContactController', function($scope) {
+        $scope.contactUser = {};
+        $scope.submitForm = function () {
+            if ($scope.contactForm.$valid) {
+                $scope.contactUser.username = $scope.contactor.name;
+                $scope.contactUser.email = $scope.contactor.email;
+                $scope.contactUser.message = $scope.contactor.message;
+                console.log($scope.contactUser.username, $scope.contactUser.email, $scope.contactUser.message);
+                var text = "You entered: " + $scope.contactUser.username + ", " + $scope.contactUser.email + ", " + $scope.contactUser.message;
+                $('#contactModal').modal('hide');
+                $('#customText').text(text);
+                $('#fictionModal').modal('show');
+            }
+        }
+
+
+
         $('#contactFormButton').click(function() {
             $('#contactModal').modal('show');
             $('#customText').text("");
