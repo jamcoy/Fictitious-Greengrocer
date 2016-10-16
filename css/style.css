@@ -9,6 +9,7 @@ body {
 
 .navbar{
     font-family: 'Roboto', sans-serif;
+    font-size: larger;
 }
 
 .navbar-brand img{
@@ -27,6 +28,7 @@ body {
 .carousel img{
     width: 100%;
     max-height: 450px;
+    min-height: 250px;
     object-fit: cover;
 }
 
@@ -35,8 +37,13 @@ body {
     border-radius: 15px;
 }
 
-.carousel-caption h1{
-    padding: 0;
+.carousel h1{
+    padding: 6px;
+    margin: 0;
+}
+
+.carousel h4{
+    padding: 6px;
     margin: 0;
 }
 
@@ -415,6 +422,14 @@ footer a{
         height: 300px;
     }
 
+    .carousel h1{
+        font-size: 1.5em;
+    }
+
+    .carousel h4{
+        font-size: 1.1em;
+    }
+
     .productDetail .productImage{
         padding: 0 6px 8px 6px;
     }
@@ -450,4 +465,3 @@ footer a{
         padding-right: 10px;
     }
 }
-
