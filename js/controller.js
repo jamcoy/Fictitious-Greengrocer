@@ -28,6 +28,11 @@ angular.module('RouteControllers', [])
             modal.modal('show');
         };
 
+        $('#shareButton').click(function() {
+            $('#detail').modal('hide');
+            $('#fictionModal').modal('show');
+        });
+
     })
     .controller('BoxesController', function($scope) {
         $('#orderFruitBox').click(function() {
