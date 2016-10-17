@@ -49,14 +49,14 @@ angular.module('RouteControllers', [])
             console.log("ProductJsonService.getProducts(URL) error:", err);
         });
 
+        $scope.productModal = {};
+
         $scope.showProductModal = function(name, description, filename) {
-            var modal =  $('#detail');
-            modal.find('.detailTitle').text(name);
-            modal.find('.detailDescription').text(description);
-            var source = "/img/produce/" + filename;
-            modal.find('.productImage').attr("src", source);
-            modal.find('.productImage').attr("alt", name);
-            modal.modal('show');
+            $scope.productModal.name = name;
+            $scope.productModal.description = description;
+            $scope.productModal.imageFile = "/img/produce/" + filename;
+            $('#detail').modal('show');
+
         };
 
     })

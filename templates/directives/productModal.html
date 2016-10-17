@@ -3,9 +3,9 @@
         <div class="modal-content">
             <div class="productDetail">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <img src="" alt="" class="productImage">
-                <h4 class="detailTitle"></h4>
-                <p class="detailDescription"></p>
+                <img ng-src="{{productModal.imageFile}}" alt="{{productModal.name}}" class="productImage">
+                <h4 class="detailTitle">{{productModal.name}}</h4>
+                <p class="detailDescription">{{productModal.description}}</p>
                 <div class="row productDetailButtonRow">
                     <div class="col-xs-6">
                         <p id="shareButton">
