@@ -15,7 +15,8 @@ angular.module('FGG-Directive',[])
     .directive('fruitboxForm', function() {
         return {
             restrict: 'E', // E -> element (or A -> attribute)
-            templateUrl: 'templates/directives/fruitboxForm.html'
+            templateUrl: 'templates/directives/fruitboxForm.html',
+            controller: 'BoxesController'
         };
     })
     .directive('footerBar', function() {

@@ -71,18 +71,36 @@ angular.module('RouteControllers', [])
     })
 
     .controller('BoxesController', function($scope) {
+
         $('#orderFruitBox').click(function() {
             $('#fruitBoxModal').modal('show');
         });
         $scope.boxCustomer = {};
         $scope.submitForm = function() {
             if ($scope.fruitboxForm.$valid) {
+                $scope.boxCustomer.subs = $scope.customer.subs;
+                $scope.boxCustomer.day = $scope.customer.day;
+                $scope.boxCustomer.slot = $scope.customer.slot;
+                $scope.boxCustomer.boxType = $scope.customer.boxType;
                 $scope.boxCustomer.name = $scope.customer.name;
                 $scope.boxCustomer.email = $scope.customer.email;
                 $scope.boxCustomer.phone = $scope.customer.phone;
+                $scope.boxCustomer.address = $scope.customer.address;
             }
-            console.log($scope.boxCustomer.name, $scope.boxCustomer.email, $scope.boxCustomer.phone);
-        }
+            console.log($scope.boxCustomer.subs,
+                        $scope.boxCustomer.day,
+                        $scope.boxCustomer.slot,
+                        $scope.boxCustomer.boxType,
+                        $scope.boxCustomer.name,
+                        $scope.boxCustomer.email,
+                        $scope.boxCustomer.phone,
+                        $scope.boxCustomer.address);
+        };
+        // workaround to highlight active radio button because standard bootstrap doesn't play nicely with angular
+        $scope.switchRadio = function(radioClass, radioId) {
+            $(radioClass).removeClass('active');
+            $(radioId).addClass('active');
+        };
     })
 
     .controller('NewsController', function($scope) {
@@ -96,7 +114,7 @@ angular.module('RouteControllers', [])
                     + ".  You haven't really subscribed to anything.";
                 $('#customText').text(text);
             }
-        }
+        };
     })
 
     .controller('ContactController', function($scope) {
