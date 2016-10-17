@@ -7,4 +7,5 @@ angular.module('ProductService', [])
             }
         };
         return ProductJsonService;
-    });
+    })
+;

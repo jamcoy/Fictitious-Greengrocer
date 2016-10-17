@@ -50,7 +50,6 @@ angular.module('RouteControllers', [])
         });
 
         $scope.productModal = {};
-
         $scope.showProductModal = function(name, description, filename) {
             $scope.productModal.name = name;
             $scope.productModal.description = description;
@@ -61,7 +60,7 @@ angular.module('RouteControllers', [])
 
     })
 
-    .controller('BoxesController', function($scope) {
+    .controller('BoxesController', function($scope, ProductEstimateService) {
 
         $('#orderFruitBox').click(function() {
             $('#fruitBoxModal').modal('show');
@@ -81,12 +80,6 @@ angular.module('RouteControllers', [])
 
             console.log($scope.boxCustomer);
 
-            FruitBoxEstimatorService($scope.boxCustomer).then(function(results) {
-                $scope.orderConfirmation = results.data;
-                console.log($scope.orderConfirmation);
-            }).catch(function(err) {
-                console.log(err);
-            });
         };
 
         // workaround to highlight active radio button because standard bootstrap doesn't play nicely with angular
