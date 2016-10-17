@@ -421,6 +421,11 @@ footer a{
     text-align: right;
 }
 
+form span{
+    color: grey;
+    font-weight: normal;
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
     #OSM{

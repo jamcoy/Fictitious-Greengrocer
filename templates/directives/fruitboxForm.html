@@ -9,20 +9,24 @@
             <div class="modal-body">
                 <form name="fruitboxForm" ng-submit="submitForm()" novalidate>
                     <div class="fruitBoxFormChoices">
+                        <label>Order details
+                        </label>
                         <table>
                             <tr>
                                 <td>Select order type:</td>
                                 <td>
-                                    <div class="form-group btn-group" data-toggle="buttons">
+                                    <div class="form-group btn-group" data-toggle="buttons" id="subsGroup">
                                         <label class="btn btn-default subscriptionRadio" id="subsfalse"
                                                ng-click="switchRadio('.subscriptionRadio', '#subsfalse')">
                                             <input type="radio" autocomplete="off" name="subs" class="form-control"
-                                                   ng-model="customer.subs" value="false">Single order
+                                                   ng-model="customer.subs" value="false" ng-required="!customer.subs">
+                                            Single order
                                         </label>
                                         <label class="btn btn-default subscriptionRadio" id="substrue"
                                                ng-click="switchRadio('.subscriptionRadio', '#substrue')">
                                             <input type="radio" autocomplete="off" name="subs" class="form-control"
-                                                   ng-model="customer.subs" value="true">Weekly subscription
+                                                   ng-model="customer.subs" value="true" ng-required="!customer.subs">
+                                            Weekly subscription
                                         </label>
                                     </div>
                                 </td>
@@ -33,28 +37,33 @@
                                     <div class="form-group btn-group" data-toggle="buttons">
                                         <label class="btn btn-default deliveryDay" id="selectMon"
                                                ng-click="switchRadio('.deliveryDay', '#selectMon')">
-                                            <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.day" value="Monday">Mon
+                                            <input type="radio" autocomplete="off" name="day" class="form-control"
+                                                   ng-model="customer.day" value="Monday"
+                                                   ng-required="!customer.day">Mon
                                         </label>
                                         <label class="btn btn-default deliveryDay" id="selectTue"
                                                ng-click="switchRadio('.deliveryDay', '#selectTue')">
-                                            <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.day" value="Tuesday">Tue
+                                            <input type="radio" autocomplete="off" name="day" class="form-control"
+                                                   ng-model="customer.day" value="Tuesday"
+                                                   ng-required="!customer.day">Tue
                                         </label>
                                         <label class="btn btn-default deliveryDay" id="selectWed"
                                                ng-click="switchRadio('.deliveryDay', '#selectWed')">
-                                            <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.day" value="Wednesday">Wed
+                                            <input type="radio" autocomplete="off" name="day" class="form-control"
+                                                   ng-model="customer.day" value="Wednesday"
+                                                   ng-required="!customer.day">Wed
                                         </label>
                                         <label class="btn btn-default deliveryDay" id="selectThu"
                                                ng-click="switchRadio('.deliveryDay', '#selectThu')">
-                                            <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.day" value="Thursday">Thu
+                                            <input type="radio" autocomplete="off" name="day" class="form-control"
+                                                   ng-model="customer.day" value="Thursday"
+                                                   ng-required="!customer.day">Thu
                                         </label>
                                         <label class="btn btn-default deliveryDay" id="selectFri"
                                                ng-click="switchRadio('.deliveryDay', '#selectFri')">
-                                            <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.day" value="Friday">Fri
+                                            <input type="radio" autocomplete="off" name="day" class="form-control"
+                                                   ng-model="customer.day" value="Friday"
+                                                   ng-required="!customer.day">Fri
                                         </label>
                                     </div>
                                 </td>
@@ -66,22 +75,26 @@
                                         <label class="btn btn-default deliverySlot" id="slot1"
                                                ng-click="switchRadio('.deliverySlot', '#slot1')">
                                             <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.slot" value="1">8 - 10
+                                                   ng-model="customer.slot" value="1"
+                                                   ng-required="!customer.slot">8 - 10
                                         </label>
                                         <label class="btn btn-default deliverySlot" id="slot2"
                                                ng-click="switchRadio('.deliverySlot', '#slot2')">
                                             <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.slot" value="2">10 - 12
+                                                   ng-model="customer.slot" value="2"
+                                                   ng-required="!customer.slot">10 - 12
                                         </label>
                                         <label class="btn btn-default deliverySlot" id="slot3"
                                                ng-click="switchRadio('.deliverySlot', '#slot3')">
                                             <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.slot" value="3">12 - 2
+                                                   ng-model="customer.slot" value="3"
+                                                   ng-required="!customer.slot">12 - 2
                                         </label>
                                         <label class="btn btn-default deliverySlot" id="slot4"
                                                ng-click="switchRadio('.deliverySlot', '#slot4')">
                                             <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.slot" value="4">2 - 4
+                                                   ng-model="customer.slot" value="4"
+                                                   ng-required="!customer.slot">2 - 4
                                         </label>
                                     </div>
                                 </td>
@@ -93,17 +106,20 @@
                                         <label class="btn btn-default boxSize" id="boxMini"
                                                ng-click="switchRadio('.boxSize', '#boxMini')">
                                             <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.boxType" value="Mini">Mini
+                                                   ng-model="customer.boxType" value="Mini"
+                                                   ng-required="!customer.boxType">Mini
                                         </label>
                                         <label class="btn btn-default boxSize" id="boxMedium"
                                                ng-click="switchRadio('.boxSize', '#boxMedium')">
                                             <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.boxType" value="Medium">Medium
+                                                   ng-model="customer.boxType" value="Medium"
+                                                   ng-required="!customer.boxType">Medium
                                         </label>
                                         <label class="btn btn-default boxSize" id="boxMaxi"
                                                ng-click="switchRadio('.boxSize', '#boxMaxi')">
                                             <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.boxType" value="Maxi">Maxi
+                                                   ng-model="customer.boxType" value="Maxi"
+                                                   ng-required="!customer.boxType">Maxi
                                         </label>
                                     </div>
                                 </td>
