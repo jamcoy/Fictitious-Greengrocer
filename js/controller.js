@@ -16,24 +16,21 @@ angular.module('RouteControllers', [])
         $scope.switchProduct = function(type) {
             switch(type) {
                 case "fruit":
+                    $('.typePill').removeClass('active');
                     $('#fruitButton').addClass('active');
-                    $('#vegButton').removeClass('active');
-                    $('#otherButton').removeClass('active');
                     $scope.showFruit = true;
                     $scope.showVeg = false;
                     $scope.showOther = false;
                     break;
                 case "veg":
-                    $('#fruitButton').removeClass('active');
+                    $('.typePill').removeClass('active');
                     $('#vegButton').addClass('active');
-                    $('#otherButton').removeClass('active');
                     $scope.showFruit = false;
                     $scope.showVeg = true;
                     $scope.showOther = false;
                     break;
                 case "other":
-                    $('#fruitButton').removeClass('active');
-                    $('#vegButton').removeClass('active');
+                    $('.typePill').removeClass('active');
                     $('#otherButton').addClass('active');
                     $scope.showFruit = false;
                     $scope.showVeg = false;
@@ -57,16 +54,10 @@ angular.module('RouteControllers', [])
             modal.find('.detailTitle').text(name);
             modal.find('.detailDescription').text(description);
             var source = "/img/produce/" + filename;
-            modal.find('.productImage').attr("src",source);
-            modal.find('.productImage').attr("alt",name);
+            modal.find('.productImage').attr("src", source);
+            modal.find('.productImage').attr("alt", name);
             modal.modal('show');
         };
-
-        $('#shareButton').click(function() {
-            $('#detail').modal('hide');
-            $('#fictionModal').modal('show');
-            $('#customText').text("");
-        });
 
     })
 
@@ -87,15 +78,17 @@ angular.module('RouteControllers', [])
                 $scope.boxCustomer.phone = $scope.customer.phone;
                 $scope.boxCustomer.address = $scope.customer.address;
             }
-            console.log($scope.boxCustomer.subs,
-                        $scope.boxCustomer.day,
-                        $scope.boxCustomer.slot,
-                        $scope.boxCustomer.boxType,
-                        $scope.boxCustomer.name,
-                        $scope.boxCustomer.email,
-                        $scope.boxCustomer.phone,
-                        $scope.boxCustomer.address);
+
+            console.log($scope.boxCustomer);
+
+            FruitBoxEstimatorService($scope.boxCustomer).then(function(results) {
+                $scope.orderConfirmation = results.data;
+                console.log($scope.orderConfirmation);
+            }).catch(function(err) {
+                console.log(err);
+            });
         };
+
         // workaround to highlight active radio button because standard bootstrap doesn't play nicely with angular
         $scope.switchRadio = function(radioClass, radioId) {
             $(radioClass).removeClass('active');
@@ -110,40 +103,32 @@ angular.module('RouteControllers', [])
                 $scope.newsletterUser.username = $scope.subscriber.name;
                 $scope.newsletterUser.email = $scope.subscriber.email;
                 $('#fictionModal').modal('show');
-                var text = "You entered: " + $scope.newsletterUser.username + ", " + $scope.newsletterUser.email
-                    + ".  You haven't really subscribed to anything.";
-                $('#customText').text(text);
+                $scope.modalMessage1 = "You entered: " + $scope.newsletterUser.username + ", " + $scope.newsletterUser.email;
+                $scope.modalMessage2 = "You haven't really subscribed to anything.";
             }
         };
     })
 
     .controller('ContactController', function($scope) {
         $scope.contactUser = {};
+
+        $('#contactFormButton').click(function() {
+            $('#contactModal').modal('show');
+        });
+
         $scope.submitForm = function () {
             if ($scope.contactForm.$valid) {
                 $scope.contactUser.username = $scope.contactor.name;
                 $scope.contactUser.email = $scope.contactor.email;
                 $scope.contactUser.message = $scope.contactor.message;
-                console.log($scope.contactUser.username, $scope.contactUser.email, $scope.contactUser.message);
-                var text = "You entered: " + $scope.contactUser.username + ", " + $scope.contactUser.email + ", "
-                    + $scope.contactUser.message + ".  Your contact message has not been sent to anyone.";
                 $('#contactModal').modal('hide');
-                $('#customText').text(text);
                 $('#fictionModal').modal('show');
+                $scope.modalMessage1 = "You entered: " + $scope.contactUser.username + ", " + $scope.contactUser.email + ", "
+                    + $scope.contactUser.message;
+                $scope.modalMessage2 =  "Your contact message has not been sent to anyone.";
             }
         };
 
-        $('#contactFormButton').click(function() {
-            $('#contactModal').modal('show');
-            $('#customText').text("");
-        });
-    })
-
-    .controller('NoFunctionModalController', function($scope) {
-        $('.socialLogo').click(function() {
-            $('#fictionModal').modal('show');
-            $('#customText').text("");
-        });
     })
 
     .controller('NavbarController', function($scope, $location) {
