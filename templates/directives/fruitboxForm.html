@@ -8,15 +8,52 @@
             </div>
             <div class="modal-body">
                 <form name="fruitboxForm" ng-submit="submitForm()" novalidate>
-
-                    <div class="btn-group" role="group" aria-label="...">
-                        <button type="button" class="btn btn-default">Mon</button>
-                        <button type="button" class="btn btn-default">Tue</button>
-                        <button type="button" class="btn btn-default">Wed</button>
-                        <button type="button" class="btn btn-default">Thu</button>
-                        <button type="button" class="btn btn-default">Fri</button>
+                    <div class="fruitBoxFormChoices">
+                        <table>
+                            <tr>
+                                <td>Select order type:</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button type="button" class="btn btn-default">Single box</button>
+                                        <button type="button" class="btn btn-default">Weekly subscription</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Select delivery day:</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button type="button" class="btn btn-default">Mon</button>
+                                        <button type="button" class="btn btn-default">Tue</button>
+                                        <button type="button" class="btn btn-default">Wed</button>
+                                        <button type="button" class="btn btn-default">Thu</button>
+                                        <button type="button" class="btn btn-default">Fri</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Select time slot:</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button type="button" class="btn btn-default">8 - 10</button>
+                                        <button type="button" class="btn btn-default">10 - 12</button>
+                                        <button type="button" class="btn btn-default">12 - 2</button>
+                                        <button type="button" class="btn btn-default">2 - 4</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Select box size:</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button type="button" class="btn btn-default">Mini</button>
+                                        <button type="button" class="btn btn-default">Medium</button>
+                                        <button type="button" class="btn btn-default">Maxi</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-
 
                     <div class="form-group">
                         <label>Name
@@ -44,7 +81,7 @@
                     </div>
                     <div class="fruitboxSubmitButton">
                         <button type="submit" class="btn btn-primary" ng-disabled="fruitboxForm.$invalid">
-                            Submit
+                            Get quote
                         </button>
                     </div>
                 </form>

@@ -285,6 +285,20 @@ footer a{
     font-size: large;
 }
 
+.fruitBoxFormChoices{
+    text-align: left;
+}
+
+.fruitBoxFormChoices table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.fruitBoxFormChoices td{
+    padding: 0 10px 10px 10px;
+}
+
 .newsContainer{
     font-family: 'Roboto', sans-serif;
 }
