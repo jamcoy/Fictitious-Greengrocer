@@ -53,7 +53,7 @@ angular.module('RouteControllers', [])
         $scope.showProductModal = function(name, description, filename) {
             $scope.productModal.name = name;
             $scope.productModal.description = description;
-            $scope.productModal.imageFile = "/img/produce/" + filename;
+            $scope.productModal.imageFile = "/img/produce/large/" + filename;
             $('#detail').modal('show');
 
         };

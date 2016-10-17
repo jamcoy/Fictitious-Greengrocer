@@ -63,9 +63,9 @@
     "description": "Combine ground beef, tuna and sausages. garnish with gooey vodka and serve breaked with meatballs. Enjoy!"
   },
   {
-    "name": "Nuts",
+    "name": "Walnuts",
     "type": "other",
-    "imagefilename": "nuts.jpeg",
+    "imagefilename": "walnuts.jpeg",
     "specialOffer": "",
     "description": "Instead of garnishing niffy herring juice with marshmellow, use one package tabasco and eight pounds vegemite bottle."
   },
@@ -152,5 +152,40 @@
     "imagefilename": "tomatoes.jpeg",
     "specialOffer": "",
     "description": "Place the chocolate in a plastic bag, and brush carefully with canned adobo sauce."
+  },
+  {
+    "name": "Coffee beans",
+    "type": "other",
+    "imagefilename": "coffeeBeans.jpeg",
+    "specialOffer": "",
+    "description": "Everyone loves the saltyness of bok choy smoothie garnishd with tasty celery."
+  },
+  {
+    "name": "Chilies",
+    "type": "vegetable",
+    "imagefilename": "chilies.jpeg",
+    "specialOffer": "",
+    "description": "To the quartered blood oranges add garlic, chili, salad cream and smashed lettuce."
+  },
+  {
+    "name": "Hazelnuts",
+    "type": "other",
+    "imagefilename": "hazelnuts.jpeg",
+    "specialOffer": "",
+    "description": "Everyone loves the asperity of quinoa sauce soaked with salted baking powder."
+  },
+  {
+    "name": "Lychees",
+    "type": "fruit",
+    "imagefilename": "lychees.jpeg",
+    "specialOffer": "",
+    "description": "Teriyaki soup is just not the same without oregano and tangy fresh bagels."
+  },
+  {
+    "name": "Oranges",
+    "type": "fruit",
+    "imagefilename": "oranges.jpeg",
+    "specialOffer": "",
+    "description": "Varnish the chocolate with minced za'atar, jasmine, rum, and pepper, making sure to cover all of it."
   }
 ]
