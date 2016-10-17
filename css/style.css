@@ -296,7 +296,11 @@ footer a{
 }
 
 .fruitBoxFormChoices td{
-    padding: 0 10px 10px 10px;
+    padding: 5px 10px;
+}
+
+.fruitBoxFormChoices .btn-group{
+    margin-bottom: 0px;
 }
 
 .newsContainer{
