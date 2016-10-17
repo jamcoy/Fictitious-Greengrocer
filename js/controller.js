@@ -60,7 +60,7 @@ angular.module('RouteControllers', [])
 
     })
 
-    .controller('BoxesController', function($scope, ProductEstimateService) {
+    .controller('BoxesController', function($scope) {
 
         $('#orderFruitBox').click(function() {
             $('#fruitBoxModal').modal('show');
@@ -77,9 +77,7 @@ angular.module('RouteControllers', [])
                 $scope.boxCustomer.phone = $scope.customer.phone;
                 $scope.boxCustomer.address = $scope.customer.address;
             }
-
             console.log($scope.boxCustomer);
-
         };
 
         // workaround to highlight active radio button because standard bootstrap doesn't play nicely with angular
