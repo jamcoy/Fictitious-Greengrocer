@@ -426,9 +426,10 @@ footer a{
 }
 
 .productContainer p{
-    padding: 5px 0 0 0;
-    font-size: 1.4em;
-    color: black;
+    padding: 4px 0 0 0;
+    font-size: 1.2em;
+    color: #333333;
+    margin-bottom: 16px;
 }
 
 .productDetail{
@@ -436,6 +437,8 @@ footer a{
 }
 
 .productDetail h4{
+    margin-top: 0px;
+    margin-bottom: 6px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -443,6 +446,7 @@ footer a{
 .productDetail p{
     padding-left: 20px;
     padding-right: 20px;
+
 }
 
 .productDetail .productImage{
