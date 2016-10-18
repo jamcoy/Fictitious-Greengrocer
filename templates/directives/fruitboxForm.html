@@ -1,12 +1,12 @@
 <div class="modal fade" id="modal-fruitBoxForm">
-    <div class="modal-dialog">
+    <section class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Order a fruit box.</h4>
                 <p class="modal-title">Complete all details to get an immediate price.<p>
             </div>
-            <div class="modal-body">
+            <section class="modal-body">
                 <form name="fruitboxForm" ng-submit="submitForm()" novalidate>
                     <div class="fruitBoxFormChoices">
                         <label>Order details
@@ -159,14 +159,14 @@
                         </button>
                     </div>
                 </form>
-                <div class="modalExtension" ng-show="orderSubmitted">
+                <section class="modalExtension" ng-show="orderSubmitted">
                     <p>{{quote}}</p>
                     <p>This is a fictitious website.  Your cannot place an order.</p>
                     <div class="modalExtensionButton">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
         </div>
-    </div>
+    </section>
 </div>

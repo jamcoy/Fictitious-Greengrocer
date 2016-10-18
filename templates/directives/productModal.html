@@ -1,12 +1,16 @@
 <div class="modal fade productModal" id="modal-produce">
-    <div class="modal-dialog">
+    <section class="modal-dialog">
         <div class="modal-content">
-            <div class="productDetail">
+            <article class="productDetail">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <img ng-src="{{productModal.imageFile}}" alt="{{productModal.name}}" class="productImage">
-                <h4 class="detailTitle">{{productModal.name}}</h4>
-                <p class="detailDescription">{{productModal.description}}</p>
-                <div class="row productDetailButtonRow">
+                <figure>
+                    <img ng-src="{{productModal.imageFile}}" alt="{{productModal.name}}" class="productImage">
+                    <figcaption>
+                        <h4 class="detailTitle">{{productModal.name}}</h4>
+                        <p class="detailDescription">{{productModal.description}}</p>
+                    </figcaption>
+                </figure>
+                <section class="row productDetailButtonRow">
                     <div class="col-xs-6">
                         <p id="shareButton">
                             <button type="button" class="btn btn-success">Share</button>
@@ -19,8 +23,8 @@
                             </button>
                         </p>
                     </div>
-                </div>
-            </div>
+                </section>
+            </article>
         </div>
-    </div>
+    </section>
 </div>

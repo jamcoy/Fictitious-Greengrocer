@@ -1,11 +1,11 @@
 <div class="modal fade" id="modal-contact">
-    <div class="modal-dialog">
+    <section class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <header class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Contact The Fictitious Greengrocer</h4>
-            </div>
-            <div class="modal-body">
+            </header>
+            <section class="modal-body">
                 <form name="contactForm" id="contactForm" ng-submit="submitForm()" novalidate>
                     <div class="form-group">
                         <label class="contactLabel">Name
@@ -31,14 +31,14 @@
                         </button>
                     </div>
                 </form>
-                <div class="modalExtension" ng-show="messageSubmitted">
+                <section class="modalExtension" ng-show="messageSubmitted">
                     <p>{{contactResponse}}</p>
                     <p>This is a fictitious website.  Your contact submission has not been sent anywhere.</p>
                     <div class="modalExtensionButton">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
         </div>
-    </div>
+    </section>
 </div>

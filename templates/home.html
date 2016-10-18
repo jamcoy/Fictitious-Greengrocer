@@ -1,7 +1,7 @@
 <navbar></navbar>
 <div class="container-fluid">
     <div class="row">
-        <div id="fggCarousel" class="carousel slide" data-ride="carousel">
+        <section id="fggCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#fggCarousel" data-slide-to="0" class="active"></li>
@@ -11,30 +11,30 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-                <div class="item active">
+                <figure class="item active">
                     <img src="/img/carousel/OrganicVeg.jpeg" alt="Organic vegetables">
-                    <div class="carousel-caption">
+                    <figcaption class="carousel-caption">
                         <h1>Organic vegetables</h1>
                         <h4>New range of locally sourced organic vegetables now available</h4>
                         <a href="#/produce" class="btn btn-primary">View vegetables</a>
-                    </div>
-                </div>
-                <div class="item">
+                    </figcaption>
+                </figure>
+                <figure class="item">
                     <img src="/img/carousel/Halloween.jpeg" alt="Halloween pumpkins">
-                    <div class="carousel-caption">
+                    <figcaption class="carousel-caption">
                         <h1>Half price pumpkins</h1>
                         <h4>Available the week before Halloween - Perfect for scaring clowns!</h4>
                         <a href="#/news" class="btn btn-primary">Read more</a>
-                    </div>
-                </div>
-                <div class="item">
+                    </figcaption>
+                </figure>
+                <figure class="item">
                     <img src="/img/carousel/FruitBox.jpeg" alt="Fruit boxes">
-                    <div class="carousel-caption">
+                    <figcaption class="carousel-caption">
                         <h1>Fruit box deliveries to your business</h1>
                         <h4>Keep your staff sharp and alert by promoting healthy eating in the workplace</h4>
                         <a href="#/boxes" class="btn btn-primary">Order now</a>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
 
             <!-- Controls (changed href attribute to data-target to work with angular) -->
@@ -46,16 +46,16 @@
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div>
+        </section>
     </div>
 </div>
 
 <div class="container">
     <div class="row homePageInfo">
         <div class="box col-sm-4">
-            <div class="columnInners">
+            <section class="columnInners">
                 <h3>Come and visit us!</h3>
-                <div id="groupHours">
+                <article id="groupHours">
                     <h4>Opening hours:</h4>
                     <table id="hours">
                         <tr>
@@ -83,11 +83,13 @@
                             </td>
                         </tr>
                     </table>
-                </div>
-                <div id="groupMapAddress">
+                </article>
+                <article id="groupMapAddress">
                     <h4>Location:</h4>
                     <a href="#/contact" id="miniMap" >
-                        <img src="/img/miniMap.png" alt="Small map"/>
+                        <figure>
+                            <img src="/img/miniMap.png" alt="Small map"/>
+                        </figure>
                     </a>
                     <p id="address">
                         123 Git Street<br/>
@@ -96,38 +98,39 @@
                         AB01 2AB<br/>
                         <a href="#/contact" id="contactButton" class="btn btn-primary">Contact</a>
                     </p>
-                </div>
-            </div>
+                </article>
+            </section>
         </div>
         <div class="box col-sm-4">
-            <div class="columnInners">
+            <section class="columnInners">
                 <h3>News and events</h3>
 
                 <a ng-repeat="article in news | limitTo: 3" href="#/news">
-                    <div class="newsItemHomepage">
+                    <article class="newsItemHomepage">
                         <h4>{{article.title}}</h4>
                         <p class="miniDate">{{article.date}}</p>
                         <p>{{article.summary}}
                         </p>
-                    </div>
+                    </article>
                 </a>
 
-            </div>
+            </section>
         </div>
         <div class="box col-sm-4">
-            <div class="columnInners noDivider" id="fruitBox">
-                <h3>Fresh fruit direct to your business</h3>
-                <p>Keep your staff bright and sharp throughout the day with our fresh fruit boxes, delivered direct to
-                    your business.</p>
-                <p>Promoting healthy eating in the workplace has numerous benefits, including happier staff that take
-                    less sick leave.</p>
-                <h4><span class="label label-success">Free delivery options available!</span></h4>
-
-                <div id="fruitButtonDiv">
-                    <img src="/img/deliveryVanSmall.png" alt="Delivery van"/>
-                    <a href="#/boxes" class="btn btn-primary" id="fruitBoxButton">Order fresh fruit</a>
-                </div>
-            </div>
+            <section class="columnInners noDivider" id="fruitBox">
+                <article>
+                    <h3>Fresh fruit direct to your business</h3>
+                    <p>Keep your staff bright and sharp throughout the day with our fresh fruit boxes, delivered direct to
+                        your business.</p>
+                    <p>Promoting healthy eating in the workplace has numerous benefits, including happier staff that take
+                        less sick leave.</p>
+                    <h4><span class="label label-success">Free delivery options available!</span></h4>
+                    <div id="fruitButtonDiv">
+                        <img src="/img/deliveryVanSmall.png" alt="Delivery van"/>
+                        <a href="#/boxes" class="btn btn-primary" id="fruitBoxButton">Order fresh fruit</a>
+                    </div>
+                </article>
+            </section>
         </div>
     </div>
 </div>
