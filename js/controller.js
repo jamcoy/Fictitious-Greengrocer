@@ -1,6 +1,6 @@
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
-        $('#fggCarousel').carousel({ interval: 6000 }); // start carousel
+        $('#fggCarousel').carousel({ interval: 6000 }); // workaround to start carousel
     })
 
     .controller('ProduceController', function($scope, ProductJsonService) {
