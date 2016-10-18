@@ -12,8 +12,8 @@ angular.module('RouteControllers', [])
 
         $scope.productdetails = [];
         // Change IP address to wherever deployed.  Can't use localhost - it won't be reachable for non-local clients.
-        var URL = "http://192.168.148.167:8080/products.json";
-        //var URL = "http://192.168.43.46:8080/products.json";
+        var URL = "http://192.168.148.167:8080/data/products.json";
+        //var URL = "http://192.168.43.46:8080//data/products.json";
         ProductJsonService.getProducts(URL).then(function(results) {
             $scope.productdetails = results.data;
         }).catch(function(err) {
