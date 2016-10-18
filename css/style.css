@@ -491,13 +491,6 @@ form span{
 
 }
 
-@media screen and (max-width : 420px) {
-    .newsStory video{
-        width: 100%;
-        margin: 0 0 10px 0;
-    }
-}
-
 @media screen and (max-width : 360px) {
     .newsStory img{
         width: 100%;
@@ -526,11 +519,6 @@ form span{
     }
 
     .newsStory img{
-        width: 100%;
-        margin: 0 0 10px 0;
-    }
-
-    .newsStory video{
         width: 100%;
         margin: 0 0 10px 0;
     }

@@ -15,18 +15,12 @@
 
         <div class="col-sm-8 col-sm-pull-4">
 
-            <div class="newsStory newsStoryLeft" id="news1">
-                <img src="/img/pumpkin.jpeg" alt="Halloween pumpkin">
-                <h3>50% off pumpkins</h3>
-                <p class="newsDate">posted 13th October 2016</p>
-                <p class="newsText">Remember: crushed pumpkin seeds taste best when squeezed in a basin brushed with
-                    brown sugar.</p>
-                <p class="newsText">With chicken breasts drink beer. Try seasoning the emeril's essence meatloafs with whole sweet chili
-                    sauce and beer, grilled. When fluffing hardened lobsters, be sure they are at room temperature.</p>
-                <p class="newsText">Grill tangy cucumbers in a fine-mesh strainer with coffee for about an hour to perfect their
-                    pepperiness. Brush the garlic with sticky sugar, za'atar, jasmine, and oregano making sure to cover
-                    all of it. Coffee soup is just not the same without radish sprouts and quartered roasted avocados.
-                    Per guest prepare twelve pounds of buttermilk with warmed onion for dessert.</p>
+            <div ng-repeat="article in news" class="newsStory" ng-class-odd="'newsStoryRight'"
+                 ng-class-even="'newsStoryLeft'">
+                <img ng-src="/img/news/{{article.mediaFilename}}" alt="{{article.mediaAlternative}}">
+                <h3>{{article.title}}</h3>
+                <p class="newsDate">{{article.author}}, {{article.date}}</p>
+                <p class="newsText">{{article.content}}</p>
             </div>
 
             <div class="newsStory newsStoryRight" id="news2">
@@ -45,31 +39,6 @@
                     squeezed in a basin brushed with brown sugar. With chicken breasts drink beer. Try seasoning the
                     emeril's essence meatloafs with whole sweet chili sauce and beer, grilled. When fluffing hardened
                     lobsters, be sure they are at room temperature.</p>
-            </div>
-
-            <div class="newsStory newsStoryLeft" id="news3">
-                <img src="/img/sprouts.jpeg" alt="Something">
-                <h3>Sprouts and wine tasting evening Friday 3rd October 2016</h3>
-                <p class="newsDate">posted 8th September 2016</p>
-                <p class="newsText">Our inaugural sprouts and wine tasting evening! Experience combinations of flavours
-                    that are sure to leave you nauseous!</p>
-                <p class="newsText">For a mild dried cake, add some adobo sauce and anise. Pickles taste best with
-                    orange juice and lots of black pepper. Minced watermelon can be made whole by blending with
-                    condensed milk.</p>
-                <p class="newsText"><em>Everyone welcome!</em></p>
-            </div>
-
-            <div class="newsStory newsStoryRight" id="news4">
-                <img src="/img/fruitboxMaxi.jpeg" alt="Something">
-                <h3>Free delivery available on our largest fruit boxes</h3>
-                <p class="newsDate">posted 19th August 2016</p>
-                <p class="newsText">Per guest prepare six oz of BBQ sauce with sliced celery for dessert. Drain asparagus carefully, then
-                    mix with BBQ sauce and serve patiently in frying pan. For a mild dried cake, add some adobo sauce
-                    and anise. Pickles taste best with orange juice and lots of black pepper.</p>
-                <p class="newsText">Minced watermelon can be made whole by blending with condensed milk. Remember:
-                    crushed pumpkin seeds taste best when squeezed in a basin brushed with brown sugar. With chicken
-                    breasts drink beer. Try seasoning the emeril's essence meatloafs with whole sweet chili sauce and
-                    beer, grilled. When fluffing hardened lobsters, be sure they are at room temperature.</p>
             </div>
 
         </div>
