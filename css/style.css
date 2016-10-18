@@ -1,4 +1,3 @@
-/* drop body below navbar */
 body {
     padding-top: 50px;
 }
@@ -10,11 +9,6 @@ body {
 .navbar{
     font-family: 'Roboto', sans-serif;
     font-size: larger;
-}
-
-.navbar-brand img{
-    /*float: left;
-    filter: drop-shadow(8px 8px 10px black);*/
 }
 
 .carousel{
@@ -109,7 +103,6 @@ body {
     vertical-align: top;
     margin-right: 6px;
 }
-
 
 #OSM{
     border: 1px solid black;
@@ -224,8 +217,6 @@ footer a{
     text-align: right;
 }
 
-/* would these be more appropriate as ids rather than classes? */
-
 .fruitBoxCardsContainer{
     font-family: 'Roboto', sans-serif;
 }
@@ -289,7 +280,6 @@ footer a{
 }
 
 .fruitBoxBenefits{
-    /*background-color: #eeaaaa;*/
     text-align: center;
 }
 
@@ -312,7 +302,7 @@ footer a{
 }
 
 .fruitBoxFormChoices .btn-group{
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .newsContainer{
@@ -437,7 +427,7 @@ footer a{
 }
 
 .productDetail h4{
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 6px;
     padding-left: 20px;
     padding-right: 20px;
@@ -452,7 +442,6 @@ footer a{
 .productDetail .productImage{
     padding: 0 20px 10px 20px;
     width: 100%;
-    /*max-width: 500px;*/
 }
 
 .productDetailButtonRow{
@@ -527,7 +516,6 @@ form span{
         padding-left: 12px;
         padding-right: 12px;
     }
-
 }
 
 @media screen and (max-width : 360px) {
@@ -556,5 +544,4 @@ form span{
         padding-left: 10px;
         padding-right: 10px;
     }
-
 }
