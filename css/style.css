@@ -464,6 +464,10 @@ form span{
     font-weight: normal;
 }
 
+.modal {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
     #OSM{
