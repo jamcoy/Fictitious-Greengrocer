@@ -208,6 +208,14 @@ footer a{
     text-align: right;
 }
 
+.modalExtension{
+    margin-top: 15px;
+}
+
+.modalExtensionButton{
+    text-align: right;
+}
+
 .fruitboxSubmitButton{
     text-align: right;
 }

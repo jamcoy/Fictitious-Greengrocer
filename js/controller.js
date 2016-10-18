@@ -1,15 +1,12 @@
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
-
-        // start carousel
-        $('#fggCarousel').carousel({ interval: 6000 });
+        $('#fggCarousel').carousel({ interval: 6000 }); // start carousel
     })
 
     .controller('ProduceController', function($scope, ProductJsonService) {
-
-        // show fruit initially
-        $scope.showProduct = 'fruit';
-
+        $scope.showProduct = 'fruit'; // show fruit initially
+        $scope.productModal = {};
+        $scope.productModal.imageFile = "/img/loading.png";
         $scope.productdetails = [];
         // Change IP address to wherever deployed.  Can't use localhost - it won't be reachable for non-local clients.
         var URL = "http://192.168.148.167:8080/data/products.json";
@@ -19,18 +16,9 @@ angular.module('RouteControllers', [])
         }).catch(function(err) {
             console.log("ProductJsonService.getProducts(URL) error:", err);
         });
-
-        $scope.productModal = {};
-        $scope.productModal.imageFile = "/img/loading.png";
-
     })
 
     .controller('BoxesController', function($scope) {
-
-        $('#orderFruitBox').click(function() {
-            $('#fruitBoxModal').modal('show');
-        });
-
         $scope.boxCustomer = {};
         $scope.submitForm = function() {
             if ($scope.fruitboxForm.$valid) {
@@ -45,7 +33,6 @@ angular.module('RouteControllers', [])
             }
             console.log($scope.boxCustomer);
         };
-
     })
 
     .controller('NewsController', function($scope) {
@@ -54,33 +41,25 @@ angular.module('RouteControllers', [])
             if ($scope.newsletterForm.$valid) {
                 $scope.newsletterUser.username = $scope.subscriber.name;
                 $scope.newsletterUser.email = $scope.subscriber.email;
-                $('#fictionModal').modal('show');
-                $scope.modalMessage1 = "You entered: " + $scope.newsletterUser.username + ", " + $scope.newsletterUser.email;
-                $scope.modalMessage2 = "You haven't really subscribed to anything.";
+                $scope.newsletterResponse = "You entered: " + $scope.newsletterUser.username + ", "
+                    + $scope.newsletterUser.email;
+                $scope.subscriptionSubmitted = true;
             }
         };
     })
 
     .controller('ContactController', function($scope) {
         $scope.contactUser = {};
-
-        $('#contactFormButton').click(function() {
-            $('#contactModal').modal('show');
-        });
-
         $scope.submitForm = function () {
             if ($scope.contactForm.$valid) {
                 $scope.contactUser.username = $scope.contactor.name;
                 $scope.contactUser.email = $scope.contactor.email;
                 $scope.contactUser.message = $scope.contactor.message;
-                $('#contactModal').modal('hide');
-                $('#fictionModal').modal('show');
-                $scope.modalMessage1 = "You entered: " + $scope.contactUser.username + ", " + $scope.contactUser.email + ", "
-                    + $scope.contactUser.message;
-                $scope.modalMessage2 =  "Your contact message has not been sent to anyone.";
+                $scope.contactResponse = "You entered: " + $scope.contactUser.username + ", " + $scope.contactUser.email
+                    + ", " + $scope.contactUser.message;
+                $scope.messageSubmitted = true;
             }
         };
-
     })
 
     .controller('NavbarController', function($scope, $location) {

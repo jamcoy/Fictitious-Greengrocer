@@ -1,4 +1,4 @@
-<div class="modal fade" id="contactModal">
+<div class="modal fade" id="modal-contact">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -27,7 +27,15 @@
                                   required></textarea>
                     </div>
                     <div class="contactSubmitButton">
-                        <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">Send message</button>
+                        <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">Send message
+                        </button>
+                    </div>
+                    <div class="modalExtension" ng-show="messageSubmitted">
+                        <p>{{contactResponse}}</p>
+                        <p>This is a fictitious website.  Your contact submission has not been sent anywhere.</p>
+                        <div class="modalExtensionButton">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </form>
             </div>

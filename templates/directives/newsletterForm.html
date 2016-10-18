@@ -19,5 +19,12 @@
         <div class="subscribeButtonDiv">
             <button type="submit" class="btn btn-primary" ng-disabled="newsletterForm.$invalid">Subscribe</button>
         </div>
+        <div class="modalExtension" ng-show="subscriptionSubmitted">
+            <p>{{newsletterResponse}}</p>
+            <p>This is a fictitious website.  Your haven't subscribed to anything.</p>
+            <div class="modalExtensionButton">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </form>
 </div>
