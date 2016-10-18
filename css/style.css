@@ -328,25 +328,12 @@ footer a{
     min-width: 150px;
 }
 
-.newsStory video{
-    margin: 15px;
-    width: 50%;
-    min-width: 220px;
-}
-
-.newsStoryLeft {
-}
-
 .newsStoryLeft img{
     float: left;
 }
 
 .newsStoryRight img, video{
     float: right;
-}
-
-.newsVideoButton{
-    text-align: center;
 }
 
 .newsStory h3{
@@ -363,6 +350,39 @@ footer a{
 .newsDate{
     font-size: 0.9em;
     margin: 5px 15px 15px 15px;
+}
+
+.guideContainer{
+    font-family: 'Roboto', sans-serif;
+}
+
+.guide{
+    display: inline-block;
+    border: 2px solid black;
+    margin-bottom: 15px;
+    background-color: #eeffdd;
+}
+
+.guide h3{
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0 15px;
+}
+
+.guideText{
+    font-size: 1.1em;
+    margin: 15px;
+}
+
+.guideDate{
+    font-size: 0.9em;
+    margin: 5px 15px 15px 15px;
+}
+
+.guide video{
+    margin: 15px;
+    width: 50%;
+    min-width: 220px;
 }
 
 .subscribeContainer{
@@ -445,6 +465,9 @@ form span{
     #OSM{
         height: 600px;
     }
+    .guide video{
+        width: 65%;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -458,6 +481,10 @@ form span{
     }
     #OSM{
         height: 500px;
+    }
+    .guide video{
+        width: 100%;
+        margin: 0 0 10px 0;
     }
 }
 
@@ -516,11 +543,6 @@ form span{
     .productDetail h4{
         padding-left: 10px;
         padding-right: 10px;
-    }
-
-    .newsStory img{
-        width: 100%;
-        margin: 0 0 10px 0;
     }
 
 }

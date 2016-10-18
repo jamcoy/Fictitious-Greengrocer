@@ -28,5 +28,8 @@ angular.module('FGG-App').config(function($routeProvider) {
         .when('/terms', {
             templateUrl: '../templates/privacyTerms.html'
         })
+        .when('/guides', {
+            templateUrl: '../templates/guides.html'
+        })
     ;
 });
