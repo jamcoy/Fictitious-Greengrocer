@@ -25,12 +25,6 @@ angular.module('FGG-Directive',[])
             templateUrl: 'templates/directives/footerBar.html'
         };
     })
-    .directive('noFunction', function() {
-        return {
-            restrict: 'E', // E -> element (or A -> attribute)
-            templateUrl: 'templates/directives/noFunction.html'
-        };
-    })
     .directive('contactForm', function() {
         return {
             restrict: 'E', // E -> element (or A -> attribute)
