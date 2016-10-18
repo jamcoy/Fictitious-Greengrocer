@@ -77,25 +77,25 @@
                                         <label class="btn btn-default deliverySlot" id="slot1"
                                                ng-click="selectSlot = '1'" ng-class="{ 'active': selectSlot == '1' }">
                                             <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.slot" value="1"
+                                                   ng-model="customer.slot" value="8 to 10"
                                                    ng-required="!customer.slot">8 - 10
                                         </label>
                                         <label class="btn btn-default deliverySlot" id="slot2"
                                                ng-click="selectSlot = '2'" ng-class="{ 'active': selectSlot == '2' }">
                                             <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.slot" value="2"
+                                                   ng-model="customer.slot" value="10 to 12"
                                                    ng-required="!customer.slot">10 - 12
                                         </label>
                                         <label class="btn btn-default deliverySlot" id="slot3"
                                                ng-click="selectSlot = '3'" ng-class="{ 'active': selectSlot == '3' }">
                                             <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.slot" value="3"
+                                                   ng-model="customer.slot" value="12 to 2"
                                                    ng-required="!customer.slot">12 - 2
                                         </label>
                                         <label class="btn btn-default deliverySlot" id="slot4"
                                                ng-click="selectSlot = '4'" ng-class="{ 'active': selectSlot == '4' }">
                                             <input type="radio" autocomplete="off" class="form-control"
-                                                   ng-model="customer.slot" value="4"
+                                                   ng-model="customer.slot" value="2 to 4"
                                                    ng-required="!customer.slot">2 - 4
                                         </label>
                                     </div>
@@ -159,6 +159,13 @@
                         </button>
                     </div>
                 </form>
+                <div class="modalExtension" ng-show="orderSubmitted">
+                    <p>{{quote}}</p>
+                    <p>This is a fictitious website.  Your cannot place an order.</p>
+                    <div class="modalExtensionButton">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

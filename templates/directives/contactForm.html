@@ -30,14 +30,14 @@
                         <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">Send message
                         </button>
                     </div>
-                    <div class="modalExtension" ng-show="messageSubmitted">
-                        <p>{{contactResponse}}</p>
-                        <p>This is a fictitious website.  Your contact submission has not been sent anywhere.</p>
-                        <div class="modalExtensionButton">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
                 </form>
+                <div class="modalExtension" ng-show="messageSubmitted">
+                    <p>{{contactResponse}}</p>
+                    <p>This is a fictitious website.  Your contact submission has not been sent anywhere.</p>
+                    <div class="modalExtensionButton">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

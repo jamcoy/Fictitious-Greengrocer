@@ -41,9 +41,31 @@ angular.module('RouteControllers', [])
                 $scope.boxCustomer.phone = $scope.customer.phone;
                 $scope.boxCustomer.address = $scope.customer.address;
             }
-            console.log($scope.boxCustomer);
-            $scope.fruitboxQuotePart1 = "Your price is £10.99";
+            var quote, price;
+            if ($scope.boxCustomer.boxType == "Maxi" && $scope.boxCustomer.subs == "true") {
+                price = "£49.99 per week, including FREE delivery.";
+            } else if ($scope.boxCustomer.boxType == "Maxi") {
+                price = "£49.99 + £10.00 delivery.";
+            } else if ($scope.boxCustomer.boxType == "Medium" && $scope.boxCustomer.subs == "true") {
+                price = "£29.99 per week + £5.00 per week delivery."
+            } else if ($scope.boxCustomer.boxType == "Medium") {
+                price = "£29.99 + £8.00 delivery.";
+            } else if ($scope.boxCustomer.subs == "true") {
+                price = "£19.99 per week + £5.00 per week delivery.";
+            } else {
+                price = "£19.99 + £7.00 delivery.";
+            }
+            if ($scope.boxCustomer.subs == "true") {
+                quote = "You requested a weekly subscription for a " + $scope.boxCustomer.boxType
+                    + " fruit box to be delivered to " + $scope.boxCustomer.address + " every " + $scope.boxCustomer.day
+                    + " from " + $scope.boxCustomer.slot + ".  This will cost you " + price;
+            } else {
+                quote = "You requested a single order of a " + $scope.boxCustomer.boxType
+                    + " fruit box to be delivered to " + $scope.boxCustomer.address + " on " + $scope.boxCustomer.day
+                    + " from " + $scope.boxCustomer.slot + ".  This will cost you " + price;
+            }
             $scope.orderSubmitted = true;
+            $scope.quote = quote;
         };
     })
 
