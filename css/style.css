@@ -136,23 +136,27 @@ body {
     margin-top: 10px;
 }
 
-.newsItem{
+.newsItemHomepage{
     border: 1px solid gray;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: black;
 }
 
-.newsItem:hover {
+.newsItemHomepage:hover {
     color: midnightblue;
 }
 
-.newsItem h4{
+.newsItemHomepage h4{
+    margin: 8px 12px 2px 12px;
+}
+
+.newsItemHomepage p{
     padding: 0 12px;
 }
 
-.newsItem p{
-    padding: 2px 12px;
+.newsItemHomepage .miniDate{
+    font-size: smaller;
 }
 
 footer{
