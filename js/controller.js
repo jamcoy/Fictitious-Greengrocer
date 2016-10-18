@@ -1,6 +1,5 @@
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
-        //$scope.title = "Welcome to the Fictitious Greengrocer";
 
         // start carousel
         $('#fggCarousel').carousel({
@@ -11,33 +10,7 @@ angular.module('RouteControllers', [])
     .controller('ProduceController', function($scope, ProductJsonService) {
 
         // show fruit initially
-        $scope.showFruit = true;
-
-        $scope.switchProduct = function(type) {
-            switch(type) {
-                case "fruit":
-                    $('.typePill').removeClass('active');
-                    $('#fruitButton').addClass('active');
-                    $scope.showFruit = true;
-                    $scope.showVeg = false;
-                    $scope.showOther = false;
-                    break;
-                case "veg":
-                    $('.typePill').removeClass('active');
-                    $('#vegButton').addClass('active');
-                    $scope.showFruit = false;
-                    $scope.showVeg = true;
-                    $scope.showOther = false;
-                    break;
-                case "other":
-                    $('.typePill').removeClass('active');
-                    $('#otherButton').addClass('active');
-                    $scope.showFruit = false;
-                    $scope.showVeg = false;
-                    $scope.showOther = true;
-                    break;
-            }
-        };
+        $scope.showProduct = 'fruit';
 
         $scope.productdetails = [];
         // Change IP address to wherever deployed.  Can't use localhost - it won't be reachable for non-local clients.
@@ -64,6 +37,7 @@ angular.module('RouteControllers', [])
         $('#orderFruitBox').click(function() {
             $('#fruitBoxModal').modal('show');
         });
+
         $scope.boxCustomer = {};
         $scope.submitForm = function() {
             if ($scope.fruitboxForm.$valid) {

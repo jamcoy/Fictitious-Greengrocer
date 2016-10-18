@@ -5,20 +5,23 @@
         <div class="col-sm-12 col-centered">
             <div class="btn-group btn-group-lg produceCatSelector" aria-label="Product type selection">
                 <ul class="nav nav-pills">
-                    <li ng-click="switchProduct('fruit')" id="fruitButton" role="presentation" class="typePill active">
+                    <li ng-click="showProduct = 'fruit'" id="fruitButton" role="presentation"
+                        ng-class="{ 'active': showProduct == 'fruit' }">
                         <a href="">Fruit</a>
                     </li>
-                    <li ng-click="switchProduct('veg')" id="vegButton" role="presentation" class="typePill">
+                    <li ng-click="showProduct = 'veg'" id="vegButton" role="presentation"
+                        ng-class="{ 'active': showProduct == 'veg' }">
                         <a href="">Vegetables</a>
                     </li>
-                    <li ng-click="switchProduct('other')" id="otherButton" role="presentation" class="typePill">
+                    <li ng-click="showProduct = 'other'" id="otherButton" role="presentation"
+                        ng-class="{ 'active': showProduct == 'other' }">
                         <a href="">Other</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="row productRow" ng-show="showFruit">
+    <div class="row productRow" ng-show="showProduct == 'fruit'">
         <div ng-repeat="product in productdetails | filter: { type: 'fruit' }:true"
              class="col-sm-6 col-md-4 col-lg-3 col-centered">
             <a href="" class="productContainer"
@@ -28,7 +31,7 @@
             </a>
         </div>
     </div>
-    <div class="row productRow" ng-show="showVeg">
+    <div class="row productRow" ng-show="showProduct == 'veg'">
         <div ng-repeat="product in productdetails | filter: { type: 'vegetable' }:true"
              class="col-sm-6 col-md-4 col-lg-3 col-centered">
             <a href="" class="productContainer"
@@ -38,7 +41,7 @@
             </a>
         </div>
     </div>
-    <div class="row productRow" ng-show="showOther">
+    <div class="row productRow" ng-show="showProduct == 'other'">
         <div ng-repeat="product in productdetails | filter: { type: 'other' }:true"
              class="col-sm-6 col-md-4 col-lg-3 col-centered">
             <a href="" class="productContainer"
