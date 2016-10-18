@@ -1,0 +1,47 @@
+[
+  {
+    "title": "50% off pumpkins",
+    "summary": "Remember: crushed pumpkin seeds taste best when squeezed in a basin brushed with brown sugar.",
+    "content": "Remember: crushed pumpkin seeds taste best when squeezed in a basin brushed with brown sugar. With chicken breasts drink beer. Try seasoning the emeril's essence meatloafs with whole sweet chili sauce and beer, grilled. When fluffing hardened lobsters, be sure they are at room temperature. Grill tangy cucumbers in a fine-mesh strainer with coffee for about an hour to perfect their pepperiness. Brush the garlic with sticky sugar, za'atar, jasmine, and oregano making sure to cover all of it. Coffee soup is just not the same without radish sprouts and quartered roasted avocados. Per guest prepare twelve pounds of buttermilk with warmed onion for dessert.",
+    "mediaType": "image",
+    "mediaFilename": "pumpkin.jpeg",
+    "mediaAlternative": "Pumpkin",
+    "author": "Tanya Smith",
+    "date": "13th October 2016"
+  },
+  {
+    "title": "How to prepare an avocado",
+    "summary": "By popular demand, here is a video showing you how to prepare an avocado.",
+    "content": "By popular demand, here is a video showing you how to prepare an avocado. You will need a sharp knife (ensure you are adequately supervised), a chopping board and one of our ripe avocados.  Unlike the 'ripe' avocados being sold in the supermarkets, ours really are ripe. Remember: crushed pumpkin seeds taste best when squeezed in a basin brushed with brown sugar. With chicken breasts drink beer. Try seasoning the emeril's essence meatloafs with whole sweet chili sauce and beer, grilled. When fluffing hardened lobsters, be sure they are at room temperature.",
+    "mediaType": "video",
+    "mediaFilename": {
+      "mp4": "avocado.mp4",
+      "ogg": "avocado.ogv",
+      "webm": "avocado.webm",
+      "poster": "avocadoPoster.jpeg"
+    },
+    "mediaAlternative": "Avocado",
+    "author": "Reginald Brown",
+    "date": ""
+  },
+  {
+    "title": "Sprouts and wine tasting evening",
+    "summary": "Friday 3rd October 2016 - Everyone welcome! Our inaugural sprouts and wine tasting evening!",
+    "content": "Friday 3rd October 2016 - Everyone welcome! Our inaugural sprouts and wine tasting evening! Experience combinations of flavours that are sure to leave you nauseous! For a mild dried cake, add some adobo sauce and anise. Pickles taste best with orange juice and lots of black pepper. Minced watermelon can be made whole by blending with condensed milk.",
+    "mediaType": "image",
+    "mediaFilename": "sprouts.jpeg",
+    "mediaAlternative": "Brussels sprouts",
+    "author": "Laura Boltizar",
+    "date": "8th September 2016"
+  },
+  {
+    "title": "Free delivery available on our largest fruit boxes",
+    "summary": "Per guest, prepare six oz of BBQ sauce with sliced celery for dessert.",
+    "content": "Per guest prepare six oz of BBQ sauce with sliced celery for dessert. Drain asparagus carefully, then mix with BBQ sauce and serve patiently in frying pan. For a mild dried cake, add some adobo sauce and anise. Pickles taste best with orange juice and lots of black pepper. Minced watermelon can be made whole by blending with condensed milk. Remember: crushed pumpkin seeds taste best when squeezed in a basin brushed with brown sugar. With chicken breasts drink beer. Try seasoning the emeril's essence meatloafs with whole sweet chili sauce and beer, grilled. When fluffing hardened lobsters, be sure they are at room temperature.",
+    "mediaType": "video",
+    "mediaFilename": "fruitboxMaxi.jpeg",
+    "mediaAlternative": "Maxi Fruit Box",
+    "author": "Vladimir Trump",
+    "date": "19th August 2016"
+  }
+]
