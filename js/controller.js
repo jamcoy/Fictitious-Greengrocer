@@ -1,5 +1,5 @@
 angular.module('RouteControllers', [])
-    .controller('HomeController', function($scope) {
+    .controller('HomeController', function() {
         $('#fggCarousel').carousel({ interval: 6000 }); // workaround to start carousel
     })
 
@@ -11,10 +11,10 @@ angular.module('RouteControllers', [])
         // Change IP address to wherever deployed.  Can't use localhost - it won't be reachable for non-local clients.
         var URL = "http://192.168.148.167:8080/data/products.json";
         //var URL = "http://192.168.43.46:8080//data/products.json";
-        JsonService.getProducts(URL).then(function(results) {
+        JsonService.getJson(URL).then(function(results) {
             $scope.productdetails = results.data;
         }).catch(function(err) {
-            console.log("ProductJsonService.getProducts(URL) error:", err);
+            console.log("JsonService.getJson(", URL, ") error:", err);
         });
     })
 
@@ -35,7 +35,18 @@ angular.module('RouteControllers', [])
         };
     })
 
-    .controller('NewsController', function($scope) {
+    .controller('NewsController', function($scope, JsonService) {
+
+        // Change IP address to wherever deployed.  Can't use localhost - it won't be reachable for non-local clients.
+        var URL = "http://192.168.148.167:8080/data/news.json";
+        //var URL = "http://192.168.43.46:8080//data/news.json";
+        JsonService.getJson(URL).then(function(results) {
+            $scope.news = results.data;
+        }).catch(function(err) {
+            console.log("JsonService.getJson(", URL, ") error:", err);
+        });
+
+
         $scope.newsletterUser = {};
         $scope.submitForm = function() {
             if ($scope.newsletterForm.$valid) {
