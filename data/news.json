@@ -28,5 +28,15 @@
     "mediaAlternative": "Maxi Fruit Box",
     "author": "Vladimir Trump",
     "date": "19th August 2016"
+  },
+  {
+    "title": "Fourth news article not on front page",
+    "summary": "This article demonstrates that the number of articles on the front page is limited to three. ",
+    "content": "This article demonstrates that the number of articles on the front page is limited to three. Cook ground leeks in a soup pot with gravy for about an hour to increase their viscosity. Try breaking white bread kebab enameled with ramen lassi. Chicken combines greatly with ripe noodles.",
+    "mediaType": "image",
+    "mediaFilename": "pumpkin.jpeg",
+    "mediaAlternative": "Pumpkin",
+    "author": "Claire Halibut",
+    "date": "1st August 2016"
   }
 ]

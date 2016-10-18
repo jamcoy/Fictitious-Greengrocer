@@ -103,7 +103,7 @@
             <div class="columnInners">
                 <h3>News and events</h3>
 
-                <a ng-repeat="article in news" href="#/news">
+                <a ng-repeat="article in news | limitTo: 3" href="#/news">
                     <div class="newsItemHomepage">
                         <h4>{{article.title}}</h4>
                         <p class="miniDate">{{article.date}}</p>
