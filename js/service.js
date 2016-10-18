@@ -1,11 +1,11 @@
-angular.module('ProductService', [])
-    .factory('ProductJsonService', function($http) {
+angular.module('DataService', [])
+    .factory('JsonService', function($http) {
 
-        ProductJsonService = {
+        JsonService = {
             getProducts: function(url) {
                 return $http.get(url);
             }
         };
-        return ProductJsonService;
+        return JsonService;
     })
 ;

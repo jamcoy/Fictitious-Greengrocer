@@ -3,7 +3,7 @@ angular.module('RouteControllers', [])
         $('#fggCarousel').carousel({ interval: 6000 }); // workaround to start carousel
     })
 
-    .controller('ProduceController', function($scope, ProductJsonService) {
+    .controller('ProduceController', function($scope, JsonService) {
         $scope.showProduct = 'fruit'; // show fruit initially
         $scope.productModal = {};
         $scope.productModal.imageFile = "/img/loading.png";
@@ -11,7 +11,7 @@ angular.module('RouteControllers', [])
         // Change IP address to wherever deployed.  Can't use localhost - it won't be reachable for non-local clients.
         var URL = "http://192.168.148.167:8080/data/products.json";
         //var URL = "http://192.168.43.46:8080//data/products.json";
-        ProductJsonService.getProducts(URL).then(function(results) {
+        JsonService.getProducts(URL).then(function(results) {
             $scope.productdetails = results.data;
         }).catch(function(err) {
             console.log("ProductJsonService.getProducts(URL) error:", err);

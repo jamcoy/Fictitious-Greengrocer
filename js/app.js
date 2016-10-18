@@ -1,4 +1,4 @@
-angular.module('FGG-App', ['ngRoute', 'RouteControllers', 'FGG-Directive', 'ProductService']);
+angular.module('FGG-App', ['ngRoute', 'RouteControllers', 'FGG-Directive', 'DataService']);
 
 angular.module('FGG-App').config(function($routeProvider) {
     $routeProvider
