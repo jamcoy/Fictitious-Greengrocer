@@ -2,9 +2,7 @@ angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
 
         // start carousel
-        $('#fggCarousel').carousel({
-            interval: 6000
-        });
+        $('#fggCarousel').carousel({ interval: 6000 });
     })
 
     .controller('ProduceController', function($scope, ProductJsonService) {
@@ -53,11 +51,6 @@ angular.module('RouteControllers', [])
             console.log($scope.boxCustomer);
         };
 
-        // workaround to highlight active radio button because standard bootstrap doesn't play nicely with angular
-        $scope.switchRadio = function(radioClass, radioId) {
-            $(radioClass).removeClass('active');
-            $(radioId).addClass('active');
-        };
     })
 
     .controller('NewsController', function($scope) {
