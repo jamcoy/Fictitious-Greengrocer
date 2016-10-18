@@ -24,8 +24,9 @@
     <div class="row productRow" ng-show="showProduct == 'fruit'">
         <div ng-repeat="product in productdetails | filter: { type: 'fruit' }:true"
              class="col-sm-6 col-md-4 col-lg-3 col-centered">
-            <a href="" class="productContainer"
-               ng-click="showProductModal(product.name, product.description, product.imagefilename)">
+            <a href="" class="productContainer" data-toggle="modal" data-target="#modal-produce"
+               ng-click="productModal.name = product.name; productModal.description = product.description;
+               productModal.imageFile = '/img/produce/large/' + product.imagefilename">
                 <img ng-src="/img/produce/{{product.imagefilename}}" alt="{{product.name}}">
                 <p>{{product.name}}</p>
             </a>
@@ -34,8 +35,9 @@
     <div class="row productRow" ng-show="showProduct == 'veg'">
         <div ng-repeat="product in productdetails | filter: { type: 'vegetable' }:true"
              class="col-sm-6 col-md-4 col-lg-3 col-centered">
-            <a href="" class="productContainer"
-               ng-click="showProductModal(product.name, product.description, product.imagefilename)">
+            <a href="" class="productContainer" data-toggle="modal" data-target="#modal-produce"
+               ng-click="productModal.name = product.name; productModal.description = product.description;
+               productModal.imageFile = '/img/produce/large/' + product.imagefilename">
                 <img ng-src="/img/produce/{{product.imagefilename}}" alt="{{product.name}}">
                 <p>{{product.name}}</p>
             </a>
@@ -44,8 +46,9 @@
     <div class="row productRow" ng-show="showProduct == 'other'">
         <div ng-repeat="product in productdetails | filter: { type: 'other' }:true"
              class="col-sm-6 col-md-4 col-lg-3 col-centered">
-            <a href="" class="productContainer"
-               ng-click="showProductModal(product.name, product.description, product.imagefilename)">
+            <a href="" class="productContainer" data-toggle="modal" data-target="#modal-produce"
+               ng-click="productModal.name = product.name; productModal.description = product.description;
+               productModal.imageFile = '/img/produce/large/' + product.imagefilename">
                 <img ng-src="/img/produce/{{product.imagefilename}}" alt="{{product.name}}">
                 <p>{{product.name}}</p>
             </a>

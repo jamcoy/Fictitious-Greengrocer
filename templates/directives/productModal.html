@@ -1,4 +1,4 @@
-<div class="modal fade productModal" id="detail">
+<div class="modal fade productModal" id="modal-produce">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="productDetail">
@@ -14,7 +14,9 @@
                     </div>
                     <div class="col-xs-6">
                         <p class="closeButton">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                    ng-click="productModal.imageFile = '/img/loading.png'">Close
+                            </button>
                         </p>
                     </div>
                 </div>
