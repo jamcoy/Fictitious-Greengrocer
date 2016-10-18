@@ -42,6 +42,8 @@ angular.module('RouteControllers', [])
                 $scope.boxCustomer.address = $scope.customer.address;
             }
             console.log($scope.boxCustomer);
+            $scope.fruitboxQuotePart1 = "Your price is £10.99";
+            $scope.orderSubmitted = true;
         };
     })
 
