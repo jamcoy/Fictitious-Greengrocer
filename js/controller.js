@@ -4,7 +4,7 @@ angular.module('RouteControllers', [])
 
         // Change IP address to wherever deployed.  Can't use localhost - it won't be reachable for non-local clients.
         var URL = "http://192.168.148.167:8080/data/news.json";
-        //var URL = "http://192.168.43.46:8080//data/news.json";
+        //var URL = "http://192.168.43.46:8080/data/news.json";
         JsonService.getJson(URL).then(function(results) {
             $scope.news = results.data;
         }).catch(function(err) {
