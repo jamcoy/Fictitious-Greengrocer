@@ -1,10 +1,13 @@
+// Change the url prefix if running locally
+var URLprefix = "https://stream1.jamcoy.com";
+//var URLprefix = "http://localhost:8080";
+
 angular.module('RouteControllers', [])
+
     .controller('HomeController', function($scope, JsonService) {
         $('#fggCarousel').carousel({ interval: 6000 }); // workaround to start carousel
 
-        // Change the URL if running locally (3 places!)
-        //var URL = "http://localhost:8080/data/news.json";
-        var URL = "https://stream1.jamcoy.com/data/news.json";
+        var URL = URLprefix + "/data/news.json";
         JsonService.getJson(URL).then(function(results) {
             $scope.news = results.data;
         }).catch(function(err) {
@@ -19,9 +22,7 @@ angular.module('RouteControllers', [])
         $scope.productModal.imageFile = "/img/loading.png";
         $scope.productdetails = [];
 
-        // Change the URL if running locally (3 places!)
-        //var URL = "http://localhost:8080/data/products.json";
-        var URL = "https://stream1.jamcoy.com/data/products.json";
+        var URL = URLprefix + "/data/products.json";
         JsonService.getJson(URL).then(function(results) {
             $scope.productdetails = results.data;
         }).catch(function(err) {
@@ -72,9 +73,7 @@ angular.module('RouteControllers', [])
 
     .controller('NewsController', function($scope, JsonService) {
 
-        // Change the URL if running locally (3 places!)
-        //var URL = "http://localhost:8080/data/news.json";
-        var URL = "https://stream1.jamcoy.com/data/news.json";
+        var URL = URLprefix + "/data/news.json";
         JsonService.getJson(URL).then(function(results) {
             $scope.news = results.data;
         }).catch(function(err) {
