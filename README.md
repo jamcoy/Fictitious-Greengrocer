@@ -2,6 +2,8 @@
 
 Code Institute stream 1 project
 
-View here:  stream1.jamcoy.com
+View here:  
 
-If running locally, change the 'host' variable in the controller.
+<a>stream1.jamcoy.com</a>
+
+If running locally, change the 'prefix url' variable in the controller.
