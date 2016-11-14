@@ -1,6 +1,5 @@
-// Change the url prefix if running locally
+// If running locally, change the url prefix to "http://localhost:8080"
 var URLprefix = "https://stream1.jamcoy.com";
-//var URLprefix = "http://localhost:8080";
 
 angular.module('RouteControllers', [])
 
